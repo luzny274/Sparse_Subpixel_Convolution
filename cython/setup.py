@@ -25,7 +25,7 @@ else:
             "Sparse_Subpixel_Convolution",
             ["sparse_conv.pyx"],
             language="c++",
-            extra_compile_args=["-O4", "-fopenmp", "-std=c++17"],
+            extra_compile_args=["-O4", "-static", "-fopenmp", "-lgomp", "-std=c++17"],
             include_dirs=[numpy.get_include()]
         ), compiler_directives={'language_level' : "3"})
     )
