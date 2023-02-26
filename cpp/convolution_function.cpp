@@ -103,16 +103,18 @@ int cpp_conv(   const int number_of_threads,    // Maximum number of threads on 
                     const indint x1_end   = std::min(camera_fov_px, x1_start + psf_res - std::max(by, (indint)0)) - x1_start;
                     const indint x2_end   = std::min(camera_fov_px, x2_start + psf_res - std::max(bx, (indint)0)) - x2_start;
                     
+                    indint sample_offx1 = frame_ind + (0 + x1_start) * camera_fov_px + x2_start;
+                    indint psf_offx1 = suby * psf_off1_ind + subx * psf_off2_ind + (std::max(by, (indint)0) + 0) * psf_res + std::max(bx, (indint)0);
                     for(indint x1 = 0; x1 < x1_end; x1++){
-                        const indint sample_offx1 = frame_ind + (x1 + x1_start) * camera_fov_px + x2_start;
-                        const indint psf_offx1 = suby * psf_off1_ind + subx * psf_off2_ind + (std::max(by, (indint)0) + x1) * psf_res + std::max(bx, (indint)0);
-
                         my_decimal * samples_off = &samples[sample_offx1];
                         const my_decimal * PSF = &local_PSF_subpxs[t_id][psf_offx1];
 
                         #pragma omp simd
                         for(indint x2 = 0; x2 < x2_end; x2++)
                             samples_off[x2] += intensity * PSF[x2];
+
+                        sample_offx1 += camera_fov_px;
+                        psf_offx1 += psf_res;
                     }
                 }
             }
