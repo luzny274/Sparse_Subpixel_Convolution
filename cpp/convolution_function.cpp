@@ -13,6 +13,7 @@
     #include <iostream>
     #include <thread>
     #include <vector>
+    #include <algorithm>
 
     #include <chrono>
     using namespace std::chrono;
@@ -88,7 +89,7 @@ int cpp_conv(   const int number_of_threads,    // Maximum number of threads on 
                 const indint suby = access_poss(subpx_poss, s, p, 0, particle_count); //Offset in subpixel dimension
                 const indint subx = access_poss(subpx_poss, s, p, 1, particle_count); //Offset in subpixel dimension
 
-                // Dummy variables to hold constant offsets in arrays
+                // Dummy variables for constant offsets in arrays
                 const indint frame_ind = sample_cursor * camera_fov_px * camera_fov_px * step_count + s * camera_fov_px * camera_fov_px;
                 const indint psf_off1_ind = psf_res * psf_res * subpixels;
                 const indint psf_off2_ind = psf_res * psf_res;
@@ -96,22 +97,28 @@ int cpp_conv(   const int number_of_threads,    // Maximum number of threads on 
                 // Intensity of the particle
                 const my_decimal intensity = intensities[p];
 
-                if(bx > 0 && bx < psf_res - camera_fov_px && by > 0 && by < psf_res - camera_fov_px) //Check whether bx and by values are valid, skip addition otherwise
-                    for(indint x1 = 0; x1 < camera_fov_px; x1++){
-                        const indint sample_offx1 = frame_ind + x1 * camera_fov_px;
-                        const indint psf_offx1 = suby * psf_off1_ind + subx * psf_off2_ind + (by + x1) * psf_res + bx;
+                if(bx > -camera_fov_px && bx < psf_res && by > -camera_fov_px && by < psf_res){ //Check whether bx and by values are valid, skip addition otherwise
+                    const indint x1_start = std::max(-by, (indint)0);
+                    const indint x2_start = std::max(-bx, (indint)0);
+                    const indint x1_end   = std::min(camera_fov_px, x1_start + psf_res - std::max(by, (indint)0)) - x1_start;
+                    const indint x2_end   = std::min(camera_fov_px, x2_start + psf_res - std::max(bx, (indint)0)) - x2_start;
+                    
+                    for(indint x1 = 0; x1 < x1_end; x1++){
+                        const indint sample_offx1 = frame_ind + (x1 + x1_start) * camera_fov_px + x2_start;
+                        const indint psf_offx1 = suby * psf_off1_ind + subx * psf_off2_ind + (std::max(by, (indint)0) + x1) * psf_res + std::max(bx, (indint)0);
 
                         my_decimal * samples_off = &samples[sample_offx1];
                         const my_decimal * PSF = &local_PSF_subpxs[t_id][psf_offx1];
 
                         #pragma omp simd
-                        for(indint x2 = 0; x2 < camera_fov_px; x2++)
+                        for(indint x2 = 0; x2 < x2_end; x2++)
                             samples_off[x2] += intensity * PSF[x2];
                     }
+                }
             }
     }
 
-    // Free allocated memory
+    // Release allocated memory
     for (int i = 0; i < number_of_threads; i++)
         delete[] local_PSF_subpxs[i];
     delete[] local_PSF_subpxs;

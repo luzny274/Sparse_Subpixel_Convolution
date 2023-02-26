@@ -4,7 +4,7 @@
 {
     "distutils": {
         "depends": [
-            "..\\cpp\\my_conv.cpp",
+            "..\\cpp\\convolutions.cpp",
             "C:\\Users\\Vita\\anaconda3\\envs\\DeepLearning_iSCAT\\lib\\site-packages\\numpy\\core\\include\\numpy\\arrayobject.h",
             "C:\\Users\\Vita\\anaconda3\\envs\\DeepLearning_iSCAT\\lib\\site-packages\\numpy\\core\\include\\numpy\\arrayscalars.h",
             "C:\\Users\\Vita\\anaconda3\\envs\\DeepLearning_iSCAT\\lib\\site-packages\\numpy\\core\\include\\numpy\\ndarrayobject.h",
@@ -795,7 +795,7 @@ static CYTHON_INLINE float __PYX_NAN() {
 
     /* NumPy API declarations from "numpy/__init__.pxd" */
     
-#include "../cpp/my_conv.cpp"
+#include "../cpp/convolutions.cpp"
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -1289,7 +1289,7 @@ typedef uint32_t __pyx_t_27Sparse_Subpixel_Convolution_my_cui32;
  * ctypedef uint32_t my_cui32
  * ctypedef uint16_t my_cui16             # <<<<<<<<<<<<<<
  * 
- * cdef extern from "../cpp/my_conv.cpp":
+ * cdef extern from "../cpp/convolutions.cpp":
  */
 typedef uint16_t __pyx_t_27Sparse_Subpixel_Convolution_my_cui16;
 
@@ -2036,13 +2036,13 @@ static const char __pyx_k_zeros[] = "zeros";
 static const char __pyx_k_astype[] = "astype";
 static const char __pyx_k_ctypes[] = "ctypes";
 static const char __pyx_k_import[] = "__import__";
+static const char __pyx_k_kernel[] = "kernel";
 static const char __pyx_k_uint16[] = "uint16";
 static const char __pyx_k_uint32[] = "uint32";
 static const char __pyx_k_float32[] = "float32";
 static const char __pyx_k_float64[] = "float64";
 static const char __pyx_k_convolve[] = "convolve";
 static const char __pyx_k_datatype[] = "datatype";
-static const char __pyx_k_PSF_subpx[] = "PSF_subpx";
 static const char __pyx_k_TypeError[] = "TypeError";
 static const char __pyx_k_ImportError[] = "ImportError";
 static const char __pyx_k_ctypes_util[] = "ctypes.util";
@@ -2068,7 +2068,6 @@ static PyObject *__pyx_kp_u_Datatype_argument_must_be_either;
 static PyObject *__pyx_kp_u_ERROR_Particle_count_in_arrays_p;
 static PyObject *__pyx_n_s_Enum;
 static PyObject *__pyx_n_s_ImportError;
-static PyObject *__pyx_n_s_PSF_subpx;
 static PyObject *__pyx_n_s_Sparse_Subpixel_Convolution;
 static PyObject *__pyx_kp_u_Sparse_Subpixel_Convolution_modu;
 static PyObject *__pyx_n_s_TypeError;
@@ -2092,6 +2091,7 @@ static PyObject *__pyx_n_s_floor;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_int32;
 static PyObject *__pyx_n_s_intensities;
+static PyObject *__pyx_n_s_kernel;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_np;
@@ -2111,7 +2111,7 @@ static PyObject *__pyx_n_u_uint16;
 static PyObject *__pyx_n_s_uint32;
 static PyObject *__pyx_n_u_uint32;
 static PyObject *__pyx_n_s_zeros;
-static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_number_of_threads, PyObject *__pyx_v_camera_fov_px, PyObject *__pyx_v_particle_positions, PyObject *__pyx_v_sample_sizes, PyObject *__pyx_v_intensities, PyObject *__pyx_v_PSF_subpx, PyObject *__pyx_v_datatype); /* proto */
+static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_number_of_threads, PyObject *__pyx_v_camera_fov_px, PyObject *__pyx_v_particle_positions, PyObject *__pyx_v_sample_sizes, PyObject *__pyx_v_intensities, PyObject *__pyx_v_kernel, PyObject *__pyx_v_datatype); /* proto */
 static PyObject *__pyx_float_1_0;
 static PyObject *__pyx_int_2;
 static PyObject *__pyx_tuple_;
@@ -2128,14 +2128,14 @@ static PyObject *__pyx_codeobj__8;
 /* "sparse_conv.pyx":35
  * 
  * 
- * def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx, datatype):             # <<<<<<<<<<<<<<
+ * def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel, datatype):             # <<<<<<<<<<<<<<
  *     """
  *     This function takes seven arguments:
  */
 
 /* Python wrapper */
 static PyObject *__pyx_pw_27Sparse_Subpixel_Convolution_1convolve(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_27Sparse_Subpixel_Convolution_convolve[] = "\n    This function takes seven arguments:\n\n    number_of_threads : int\n        Maximum number of threads on which to paralalyze the convolution for loop\n    camera_fov_px : int\n        Dimension of the output\n    particle_positions : numpy.ndarray[np.double_t, ndim=3]\n        Array of individual particle positions in different frames, dimensions: (step_count, particle_count, 2 coordinates)\n    sample_sizes : numpy.ndarray[np.int32_t, ndim=1]\n        Number of particles belonging to a specific sample, dimension: (particle_count)\n    intensities : numpy.ndarray[datatype, ndim=1]\n        Intensities of individual particles, dimension: (particle_count)\n    PSF_subpx : numpy.ndarray[datatype, ndim=4]\n        Point Spread Function array, dimensions: (subpixels, subpixels, psf_res, psf_res)\n    datatype : type\n        datatype of intensities, PSF and output. Possible values: numpy.float64, numpy.float32, numpy.uint32, numpy.uint16\n\n    Returns\n    -------\n    numpy.ndarray[datatype, ndim=4]\n        Output array with dimensions (sample_count, step_count, camera_fov_px, camera_fov_px). If convolution could not happen due to invalid input, it is filled with zeros.\n    ";
+static char __pyx_doc_27Sparse_Subpixel_Convolution_convolve[] = "\n    This function takes seven arguments:\n\n    number_of_threads : int\n        Maximum number of threads on which to paralalyze the convolution for loop\n    camera_fov_px : int\n        Dimension of the output\n    particle_positions : numpy.ndarray[np.double_t, ndim=3]\n        Array of individual particle positions in different frames, dimensions: (step_count, particle_count, 2 coordinates)\n    sample_sizes : numpy.ndarray[np.int32_t, ndim=1]\n        Number of particles belonging to a specific sample, dimension: (particle_count)\n    intensities : numpy.ndarray[datatype, ndim=1]\n        Intensities of individual particles, dimension: (particle_count)\n    kernel : numpy.ndarray[datatype, ndim=4]\n        Point Spread Function array, dimensions: (subpixels, subpixels, psf_res, psf_res)\n    datatype : type\n        datatype of intensities, PSF and output. Possible values: numpy.float64, numpy.float32, numpy.uint32, numpy.uint16\n\n    Returns\n    -------\n    numpy.ndarray[datatype, ndim=4]\n        Output array with dimensions (sample_count, step_count, camera_fov_px, camera_fov_px). If convolution could not happen due to invalid input, it is filled with zeros.\n    ";
 static PyMethodDef __pyx_mdef_27Sparse_Subpixel_Convolution_1convolve = {"convolve", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_27Sparse_Subpixel_Convolution_1convolve, METH_VARARGS|METH_KEYWORDS, __pyx_doc_27Sparse_Subpixel_Convolution_convolve};
 static PyObject *__pyx_pw_27Sparse_Subpixel_Convolution_1convolve(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_number_of_threads = 0;
@@ -2143,7 +2143,7 @@ static PyObject *__pyx_pw_27Sparse_Subpixel_Convolution_1convolve(PyObject *__py
   PyObject *__pyx_v_particle_positions = 0;
   PyObject *__pyx_v_sample_sizes = 0;
   PyObject *__pyx_v_intensities = 0;
-  PyObject *__pyx_v_PSF_subpx = 0;
+  PyObject *__pyx_v_kernel = 0;
   PyObject *__pyx_v_datatype = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -2152,7 +2152,7 @@ static PyObject *__pyx_pw_27Sparse_Subpixel_Convolution_1convolve(PyObject *__py
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("convolve (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_number_of_threads,&__pyx_n_s_camera_fov_px,&__pyx_n_s_particle_positions,&__pyx_n_s_sample_sizes,&__pyx_n_s_intensities,&__pyx_n_s_PSF_subpx,&__pyx_n_s_datatype,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_number_of_threads,&__pyx_n_s_camera_fov_px,&__pyx_n_s_particle_positions,&__pyx_n_s_sample_sizes,&__pyx_n_s_intensities,&__pyx_n_s_kernel,&__pyx_n_s_datatype,0};
     PyObject* values[7] = {0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -2206,7 +2206,7 @@ static PyObject *__pyx_pw_27Sparse_Subpixel_Convolution_1convolve(PyObject *__py
         }
         CYTHON_FALLTHROUGH;
         case  5:
-        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_PSF_subpx)) != 0)) kw_args--;
+        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kernel)) != 0)) kw_args--;
         else {
           __Pyx_RaiseArgtupleInvalid("convolve", 1, 7, 7, 5); __PYX_ERR(0, 35, __pyx_L3_error)
         }
@@ -2236,7 +2236,7 @@ static PyObject *__pyx_pw_27Sparse_Subpixel_Convolution_1convolve(PyObject *__py
     __pyx_v_particle_positions = values[2];
     __pyx_v_sample_sizes = values[3];
     __pyx_v_intensities = values[4];
-    __pyx_v_PSF_subpx = values[5];
+    __pyx_v_kernel = values[5];
     __pyx_v_datatype = values[6];
   }
   goto __pyx_L4_argument_unpacking_done;
@@ -2247,14 +2247,14 @@ static PyObject *__pyx_pw_27Sparse_Subpixel_Convolution_1convolve(PyObject *__py
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_27Sparse_Subpixel_Convolution_convolve(__pyx_self, __pyx_v_number_of_threads, __pyx_v_camera_fov_px, __pyx_v_particle_positions, __pyx_v_sample_sizes, __pyx_v_intensities, __pyx_v_PSF_subpx, __pyx_v_datatype);
+  __pyx_r = __pyx_pf_27Sparse_Subpixel_Convolution_convolve(__pyx_self, __pyx_v_number_of_threads, __pyx_v_camera_fov_px, __pyx_v_particle_positions, __pyx_v_sample_sizes, __pyx_v_intensities, __pyx_v_kernel, __pyx_v_datatype);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_number_of_threads, PyObject *__pyx_v_camera_fov_px, PyObject *__pyx_v_particle_positions, PyObject *__pyx_v_sample_sizes, PyObject *__pyx_v_intensities, PyObject *__pyx_v_PSF_subpx, PyObject *__pyx_v_datatype) {
+static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_number_of_threads, PyObject *__pyx_v_camera_fov_px, PyObject *__pyx_v_particle_positions, PyObject *__pyx_v_sample_sizes, PyObject *__pyx_v_intensities, PyObject *__pyx_v_kernel, PyObject *__pyx_v_datatype) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -2336,7 +2336,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED P
  *         raise TypeError('camera_fov_px must be an integer')
  * 
  *     if datatype == np.float64:             # <<<<<<<<<<<<<<
- *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.float32:
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 65, __pyx_L1_error)
@@ -2353,16 +2353,16 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED P
     /* "sparse_conv.pyx":66
  * 
  *     if datatype == np.float64:
- *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)             # <<<<<<<<<<<<<<
+ *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)             # <<<<<<<<<<<<<<
  *     elif datatype == np.float32:
- *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  */
     __Pyx_XDECREF(__pyx_r);
     if (!(likely(((__pyx_v_particle_positions) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_particle_positions, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 66, __pyx_L1_error)
     if (!(likely(((__pyx_v_sample_sizes) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_sample_sizes, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 66, __pyx_L1_error)
     if (!(likely(((__pyx_v_intensities) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_intensities, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 66, __pyx_L1_error)
-    if (!(likely(((__pyx_v_PSF_subpx) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_PSF_subpx, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 66, __pyx_L1_error)
-    __pyx_t_3 = __pyx_f_27Sparse_Subpixel_Convolution_convolve_fl64(__pyx_v_number_of_threads, __pyx_v_camera_fov_px, ((PyArrayObject *)__pyx_v_particle_positions), ((PyArrayObject *)__pyx_v_sample_sizes), ((PyArrayObject *)__pyx_v_intensities), ((PyArrayObject *)__pyx_v_PSF_subpx)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 66, __pyx_L1_error)
+    if (!(likely(((__pyx_v_kernel) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_kernel, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 66, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_27Sparse_Subpixel_Convolution_convolve_fl64(__pyx_v_number_of_threads, __pyx_v_camera_fov_px, ((PyArrayObject *)__pyx_v_particle_positions), ((PyArrayObject *)__pyx_v_sample_sizes), ((PyArrayObject *)__pyx_v_intensities), ((PyArrayObject *)__pyx_v_kernel)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -2372,16 +2372,16 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED P
  *         raise TypeError('camera_fov_px must be an integer')
  * 
  *     if datatype == np.float64:             # <<<<<<<<<<<<<<
- *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.float32:
  */
   }
 
   /* "sparse_conv.pyx":67
  *     if datatype == np.float64:
- *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.float32:             # <<<<<<<<<<<<<<
- *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.uint32:
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 67, __pyx_L1_error)
@@ -2396,18 +2396,18 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED P
   if (__pyx_t_1) {
 
     /* "sparse_conv.pyx":68
- *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.float32:
- *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)             # <<<<<<<<<<<<<<
+ *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)             # <<<<<<<<<<<<<<
  *     elif datatype == np.uint32:
- *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  */
     __Pyx_XDECREF(__pyx_r);
     if (!(likely(((__pyx_v_particle_positions) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_particle_positions, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 68, __pyx_L1_error)
     if (!(likely(((__pyx_v_sample_sizes) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_sample_sizes, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 68, __pyx_L1_error)
     if (!(likely(((__pyx_v_intensities) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_intensities, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 68, __pyx_L1_error)
-    if (!(likely(((__pyx_v_PSF_subpx) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_PSF_subpx, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 68, __pyx_L1_error)
-    __pyx_t_3 = __pyx_f_27Sparse_Subpixel_Convolution_convolve_fl32(__pyx_v_number_of_threads, __pyx_v_camera_fov_px, ((PyArrayObject *)__pyx_v_particle_positions), ((PyArrayObject *)__pyx_v_sample_sizes), ((PyArrayObject *)__pyx_v_intensities), ((PyArrayObject *)__pyx_v_PSF_subpx)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 68, __pyx_L1_error)
+    if (!(likely(((__pyx_v_kernel) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_kernel, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 68, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_27Sparse_Subpixel_Convolution_convolve_fl32(__pyx_v_number_of_threads, __pyx_v_camera_fov_px, ((PyArrayObject *)__pyx_v_particle_positions), ((PyArrayObject *)__pyx_v_sample_sizes), ((PyArrayObject *)__pyx_v_intensities), ((PyArrayObject *)__pyx_v_kernel)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -2415,18 +2415,18 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED P
 
     /* "sparse_conv.pyx":67
  *     if datatype == np.float64:
- *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.float32:             # <<<<<<<<<<<<<<
- *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.uint32:
  */
   }
 
   /* "sparse_conv.pyx":69
  *     elif datatype == np.float32:
- *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.uint32:             # <<<<<<<<<<<<<<
- *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.uint16:
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 69, __pyx_L1_error)
@@ -2441,18 +2441,18 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED P
   if (__pyx_t_1) {
 
     /* "sparse_conv.pyx":70
- *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.uint32:
- *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)             # <<<<<<<<<<<<<<
+ *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)             # <<<<<<<<<<<<<<
  *     elif datatype == np.uint16:
- *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  */
     __Pyx_XDECREF(__pyx_r);
     if (!(likely(((__pyx_v_particle_positions) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_particle_positions, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 70, __pyx_L1_error)
     if (!(likely(((__pyx_v_sample_sizes) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_sample_sizes, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 70, __pyx_L1_error)
     if (!(likely(((__pyx_v_intensities) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_intensities, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 70, __pyx_L1_error)
-    if (!(likely(((__pyx_v_PSF_subpx) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_PSF_subpx, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 70, __pyx_L1_error)
-    __pyx_t_3 = __pyx_f_27Sparse_Subpixel_Convolution_convolve_ui32(__pyx_v_number_of_threads, __pyx_v_camera_fov_px, ((PyArrayObject *)__pyx_v_particle_positions), ((PyArrayObject *)__pyx_v_sample_sizes), ((PyArrayObject *)__pyx_v_intensities), ((PyArrayObject *)__pyx_v_PSF_subpx)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 70, __pyx_L1_error)
+    if (!(likely(((__pyx_v_kernel) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_kernel, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 70, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_27Sparse_Subpixel_Convolution_convolve_ui32(__pyx_v_number_of_threads, __pyx_v_camera_fov_px, ((PyArrayObject *)__pyx_v_particle_positions), ((PyArrayObject *)__pyx_v_sample_sizes), ((PyArrayObject *)__pyx_v_intensities), ((PyArrayObject *)__pyx_v_kernel)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 70, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -2460,18 +2460,18 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED P
 
     /* "sparse_conv.pyx":69
  *     elif datatype == np.float32:
- *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.uint32:             # <<<<<<<<<<<<<<
- *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.uint16:
  */
   }
 
   /* "sparse_conv.pyx":71
  *     elif datatype == np.uint32:
- *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.uint16:             # <<<<<<<<<<<<<<
- *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     else:
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 71, __pyx_L1_error)
@@ -2486,9 +2486,9 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED P
   if (likely(__pyx_t_1)) {
 
     /* "sparse_conv.pyx":72
- *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.uint16:
- *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)             # <<<<<<<<<<<<<<
+ *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)             # <<<<<<<<<<<<<<
  *     else:
  *         raise TypeError('Datatype argument must be either numpy.float64, numpy.float32, numpy.uint32 or numpy.uint16')
  */
@@ -2496,8 +2496,8 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED P
     if (!(likely(((__pyx_v_particle_positions) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_particle_positions, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 72, __pyx_L1_error)
     if (!(likely(((__pyx_v_sample_sizes) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_sample_sizes, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 72, __pyx_L1_error)
     if (!(likely(((__pyx_v_intensities) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_intensities, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 72, __pyx_L1_error)
-    if (!(likely(((__pyx_v_PSF_subpx) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_PSF_subpx, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 72, __pyx_L1_error)
-    __pyx_t_3 = __pyx_f_27Sparse_Subpixel_Convolution_convolve_ui16(__pyx_v_number_of_threads, __pyx_v_camera_fov_px, ((PyArrayObject *)__pyx_v_particle_positions), ((PyArrayObject *)__pyx_v_sample_sizes), ((PyArrayObject *)__pyx_v_intensities), ((PyArrayObject *)__pyx_v_PSF_subpx)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
+    if (!(likely(((__pyx_v_kernel) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_kernel, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 72, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_27Sparse_Subpixel_Convolution_convolve_ui16(__pyx_v_number_of_threads, __pyx_v_camera_fov_px, ((PyArrayObject *)__pyx_v_particle_positions), ((PyArrayObject *)__pyx_v_sample_sizes), ((PyArrayObject *)__pyx_v_intensities), ((PyArrayObject *)__pyx_v_kernel)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -2505,15 +2505,15 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED P
 
     /* "sparse_conv.pyx":71
  *     elif datatype == np.uint32:
- *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     elif datatype == np.uint16:             # <<<<<<<<<<<<<<
- *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     else:
  */
   }
 
   /* "sparse_conv.pyx":74
- *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     else:
  *         raise TypeError('Datatype argument must be either numpy.float64, numpy.float32, numpy.uint32 or numpy.uint16')             # <<<<<<<<<<<<<<
  * 
@@ -2530,7 +2530,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_convolve(CYTHON_UNUSED P
   /* "sparse_conv.pyx":35
  * 
  * 
- * def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx, datatype):             # <<<<<<<<<<<<<<
+ * def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel, datatype):             # <<<<<<<<<<<<<<
  *     """
  *     This function takes seven arguments:
  */
@@ -7206,7 +7206,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_ERROR_Particle_count_in_arrays_p, __pyx_k_ERROR_Particle_count_in_arrays_p, sizeof(__pyx_k_ERROR_Particle_count_in_arrays_p), 0, 1, 0, 0},
   {&__pyx_n_s_Enum, __pyx_k_Enum, sizeof(__pyx_k_Enum), 0, 0, 1, 1},
   {&__pyx_n_s_ImportError, __pyx_k_ImportError, sizeof(__pyx_k_ImportError), 0, 0, 1, 1},
-  {&__pyx_n_s_PSF_subpx, __pyx_k_PSF_subpx, sizeof(__pyx_k_PSF_subpx), 0, 0, 1, 1},
   {&__pyx_n_s_Sparse_Subpixel_Convolution, __pyx_k_Sparse_Subpixel_Convolution, sizeof(__pyx_k_Sparse_Subpixel_Convolution), 0, 0, 1, 1},
   {&__pyx_kp_u_Sparse_Subpixel_Convolution_modu, __pyx_k_Sparse_Subpixel_Convolution_modu, sizeof(__pyx_k_Sparse_Subpixel_Convolution_modu), 0, 1, 0, 0},
   {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
@@ -7230,6 +7229,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_int32, __pyx_k_int32, sizeof(__pyx_k_int32), 0, 0, 1, 1},
   {&__pyx_n_s_intensities, __pyx_k_intensities, sizeof(__pyx_k_intensities), 0, 0, 1, 1},
+  {&__pyx_n_s_kernel, __pyx_k_kernel, sizeof(__pyx_k_kernel), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
   {&__pyx_n_s_np, __pyx_k_np, sizeof(__pyx_k_np), 0, 0, 1, 1},
@@ -7287,7 +7287,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__2);
 
   /* "sparse_conv.pyx":74
- *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+ *         return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
  *     else:
  *         raise TypeError('Datatype argument must be either numpy.float64, numpy.float32, numpy.uint32 or numpy.uint16')             # <<<<<<<<<<<<<<
  * 
@@ -7333,11 +7333,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "sparse_conv.pyx":35
  * 
  * 
- * def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx, datatype):             # <<<<<<<<<<<<<<
+ * def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel, datatype):             # <<<<<<<<<<<<<<
  *     """
  *     This function takes seven arguments:
  */
-  __pyx_tuple__7 = PyTuple_Pack(7, __pyx_n_s_number_of_threads, __pyx_n_s_camera_fov_px, __pyx_n_s_particle_positions, __pyx_n_s_sample_sizes, __pyx_n_s_intensities, __pyx_n_s_PSF_subpx, __pyx_n_s_datatype); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_tuple__7 = PyTuple_Pack(7, __pyx_n_s_number_of_threads, __pyx_n_s_camera_fov_px, __pyx_n_s_particle_positions, __pyx_n_s_sample_sizes, __pyx_n_s_intensities, __pyx_n_s_kernel, __pyx_n_s_datatype); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
   __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(7, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_sparse_conv_pyx, __pyx_n_s_convolve, 35, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 35, __pyx_L1_error)
@@ -7756,7 +7756,7 @@ if (!__Pyx_RefNanny) {
   /* "sparse_conv.pyx":35
  * 
  * 
- * def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx, datatype):             # <<<<<<<<<<<<<<
+ * def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel, datatype):             # <<<<<<<<<<<<<<
  *     """
  *     This function takes seven arguments:
  */

@@ -24,7 +24,7 @@ ctypedef float    my_cfl32
 ctypedef uint32_t my_cui32 
 ctypedef uint16_t my_cui16 
 
-cdef extern from "../cpp/my_conv.cpp":
+cdef extern from "../cpp/convolutions.cpp":
     cdef void cpp_conv_fl64(int number_of_threads, int64_t sample_count, my_cfl64 * samples, int64_t particle_count, int64_t step_count, int64_t camera_fov_px, int64_t subpixels, int64_t psf_res, int * subpx_poss, int * offpx_poss, int * sample_sizes, my_cfl64 * intensities, my_cfl64 * PSF_subpx)
     cdef void cpp_conv_fl32(int number_of_threads, int64_t sample_count, my_cfl32 * samples, int64_t particle_count, int64_t step_count, int64_t camera_fov_px, int64_t subpixels, int64_t psf_res, int * subpx_poss, int * offpx_poss, int * sample_sizes, my_cfl32 * intensities, my_cfl32 * PSF_subpx)
     
@@ -32,7 +32,7 @@ cdef extern from "../cpp/my_conv.cpp":
     cdef void cpp_conv_ui16(int number_of_threads, int64_t sample_count, my_cui16 * samples, int64_t particle_count, int64_t step_count, int64_t camera_fov_px, int64_t subpixels, int64_t psf_res, int * subpx_poss, int * offpx_poss, int * sample_sizes, my_cui16 * intensities, my_cui16 * PSF_subpx)
 
 
-def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx, datatype):
+def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel, datatype):
     """
     This function takes seven arguments:
 
@@ -46,7 +46,7 @@ def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes,
         Number of particles belonging to a specific sample, dimension: (particle_count)
     intensities : numpy.ndarray[datatype, ndim=1]
         Intensities of individual particles, dimension: (particle_count)
-    PSF_subpx : numpy.ndarray[datatype, ndim=4]
+    kernel : numpy.ndarray[datatype, ndim=4]
         Point Spread Function array, dimensions: (subpixels, subpixels, psf_res, psf_res)
     datatype : type
         datatype of intensities, PSF and output. Possible values: numpy.float64, numpy.float32, numpy.uint32, numpy.uint16
@@ -63,13 +63,13 @@ def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes,
         raise TypeError('camera_fov_px must be an integer')
 
     if datatype == np.float64:
-        return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+        return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
     elif datatype == np.float32:
-        return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+        return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
     elif datatype == np.uint32:
-        return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+        return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
     elif datatype == np.uint16:
-        return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, PSF_subpx)
+        return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
     else:
         raise TypeError('Datatype argument must be either numpy.float64, numpy.float32, numpy.uint32 or numpy.uint16')
 
