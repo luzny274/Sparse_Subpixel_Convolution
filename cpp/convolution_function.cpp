@@ -45,9 +45,9 @@ int cpp_conv(   const int number_of_threads,    // Maximum number of threads on 
             ){
 
     printf("\n");
-    printf("\nOMP setting number of threads to %d", number_of_threads);
     int threads = omp_get_max_threads();
     printf("\nOMP max threads: %d", threads);
+    printf("\nOMP setting number of threads to %d", number_of_threads);
     omp_set_num_threads(number_of_threads);
 
     auto start = high_resolution_clock::now();
