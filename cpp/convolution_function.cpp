@@ -44,10 +44,17 @@ int cpp_conv(   const int number_of_threads,    // Maximum number of threads on 
                 const my_decimal * PSF_subpx    // Point Spread Function array with dimensions (subpixels, subpixels, psf_res, psf_res)
             ){
 
-    printf("\n");
+    int verbose = 1;
+
     int threads = omp_get_max_threads();
-    printf("\nOMP max threads: %d", threads);
-    printf("\nOMP setting number of threads to %d", number_of_threads);
+
+    if (verbose > 0){
+        printf("\n");
+        printf("\nOMP max threads: %d", threads);
+        printf("\nOMP setting number of threads to %d", number_of_threads);
+        fflush(stdout);
+    }
+    
     omp_set_num_threads(number_of_threads);
 
     auto start = high_resolution_clock::now();
@@ -75,12 +82,24 @@ int cpp_conv(   const int number_of_threads,    // Maximum number of threads on 
     }
 
     long long duration = duration_cast<milliseconds>(high_resolution_clock::now() - start).count();
-    printf("\nPreparation of memory took %lld ms", duration);
+    
+    if (verbose > 0){
+        printf("\nPreparation of memory took %lld ms", duration);
+        fflush(stdout);
+    }
 
     // Convolution
     #pragma omp parallel for schedule(dynamic)
     for (indint sample_cursor = 0; sample_cursor < sample_count; sample_cursor++){ // Samples
         indint t_id = omp_get_thread_num(); // Id of current thread
+        // if (verbose > 0){
+        //     if(sample_cursor % 20 == 0)
+        //         std::cout << "\n";
+
+        //     std::cout << ";i:" << t_id;
+        //     fflush(stdout);
+        // }
+
         for (indint s = 0; s < step_count; s++) // Steps (frames)
             for (indint p = sample_inds[sample_cursor]; p < sample_inds[sample_cursor] + (indint)sample_sizes[sample_cursor]; p++) // Particles
             {

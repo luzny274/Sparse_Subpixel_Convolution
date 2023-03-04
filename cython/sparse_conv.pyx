@@ -97,8 +97,11 @@ cdef convolve_fl64(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
 
     # Get PSF_subpx indices from particle positions
     PSF_FOV_edge = int(PSF_subpx.shape[2] / 2)
-    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0).astype(np.int32)
+    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0)).astype(np.int32)
     cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)    
+
+    subpx_poss[subpx_poss < 0] = 0
+    subpx_poss[subpx_poss >= subpixels] = subpixels - 1
 
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
@@ -124,8 +127,11 @@ cdef convolve_fl32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
 
     # Get PSF_subpx indices from particle positions
     PSF_FOV_edge = int(psf_res / 2)
-    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0).astype(np.int32)
+    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0)).astype(np.int32)
     cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)    
+
+    subpx_poss[subpx_poss < 0] = 0
+    subpx_poss[subpx_poss >= subpixels] = subpixels - 1
 
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
@@ -152,9 +158,12 @@ cdef convolve_ui32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
 
     # Get PSF_subpx indices from particle positions
     PSF_FOV_edge = int(PSF_subpx.shape[2] / 2)
-    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0).astype(np.int32)
+    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0)).astype(np.int32)
     cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)    
 
+    subpx_poss[subpx_poss < 0] = 0
+    subpx_poss[subpx_poss >= subpixels] = subpixels - 1
+    
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
     subpx_poss =    np.ascontiguousarray(subpx_poss)
@@ -179,9 +188,12 @@ cdef convolve_ui16(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
 
     # Get PSF_subpx indices from particle positions
     PSF_FOV_edge = int(PSF_subpx.shape[2] / 2)
-    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0).astype(np.int32)
+    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0)).astype(np.int32)
     cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)    
 
+    subpx_poss[subpx_poss < 0] = 0
+    subpx_poss[subpx_poss >= subpixels] = subpixels - 1
+    
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
     subpx_poss =    np.ascontiguousarray(subpx_poss)
