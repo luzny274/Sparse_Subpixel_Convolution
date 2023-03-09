@@ -106,7 +106,6 @@ cdef convolve_fl64(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
 
     subpx_poss[subpx_poss < 0] = 0
     subpx_poss[subpx_poss >= subpixels] = subpixels - 1
-    # subpx_poss[subpx_poss < 1] = 1
 
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
@@ -137,7 +136,6 @@ cdef convolve_fl32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
 
     subpx_poss[subpx_poss < 0] = 0
     subpx_poss[subpx_poss >= subpixels] = subpixels - 1
-    #subpx_poss[subpx_poss >= subpixels - 1] = subpixels - 2
 
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
@@ -169,7 +167,6 @@ cdef convolve_ui32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
 
     subpx_poss[subpx_poss < 0] = 0
     subpx_poss[subpx_poss >= subpixels] = subpixels - 1
-    #subpx_poss[subpx_poss < 1] = 1
     
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
@@ -200,7 +197,6 @@ cdef convolve_ui16(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
 
     subpx_poss[subpx_poss < 0] = 0
     subpx_poss[subpx_poss >= subpixels] = subpixels - 1
-    #subpx_poss[subpx_poss < 1] = 1
     
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
