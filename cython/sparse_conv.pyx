@@ -25,14 +25,14 @@ ctypedef uint32_t my_cui32
 ctypedef uint16_t my_cui16 
 
 cdef extern from "../cpp/convolutions.cpp":
-    cdef void cpp_conv_fl64(int number_of_threads, int64_t sample_count, my_cfl64 * samples, int64_t particle_count, int64_t step_count, int64_t camera_fov_px, int64_t subpixels, int64_t psf_res, int * subpx_poss, int * offpx_poss, int * sample_sizes, my_cfl64 * intensities, my_cfl64 * PSF_subpx)
-    cdef void cpp_conv_fl32(int number_of_threads, int64_t sample_count, my_cfl32 * samples, int64_t particle_count, int64_t step_count, int64_t camera_fov_px, int64_t subpixels, int64_t psf_res, int * subpx_poss, int * offpx_poss, int * sample_sizes, my_cfl32 * intensities, my_cfl32 * PSF_subpx)
+    cdef void cpp_conv_fl64(int number_of_threads, int64_t sample_count, my_cfl64 * samples, int64_t particle_count, int64_t step_count, int64_t camera_fov_px, int64_t subpixels, int64_t psf_res, int * subpx_poss, int * offpx_poss, int * sample_sizes, my_cfl64 * intensities, my_cfl64 * PSF_subpx, int verbose)
+    cdef void cpp_conv_fl32(int number_of_threads, int64_t sample_count, my_cfl32 * samples, int64_t particle_count, int64_t step_count, int64_t camera_fov_px, int64_t subpixels, int64_t psf_res, int * subpx_poss, int * offpx_poss, int * sample_sizes, my_cfl32 * intensities, my_cfl32 * PSF_subpx, int verbose)
     
-    cdef void cpp_conv_ui32(int number_of_threads, int64_t sample_count, my_cui32 * samples, int64_t particle_count, int64_t step_count, int64_t camera_fov_px, int64_t subpixels, int64_t psf_res, int * subpx_poss, int * offpx_poss, int * sample_sizes, my_cui32 * intensities, my_cui32 * PSF_subpx)
-    cdef void cpp_conv_ui16(int number_of_threads, int64_t sample_count, my_cui16 * samples, int64_t particle_count, int64_t step_count, int64_t camera_fov_px, int64_t subpixels, int64_t psf_res, int * subpx_poss, int * offpx_poss, int * sample_sizes, my_cui16 * intensities, my_cui16 * PSF_subpx)
+    cdef void cpp_conv_ui32(int number_of_threads, int64_t sample_count, my_cui32 * samples, int64_t particle_count, int64_t step_count, int64_t camera_fov_px, int64_t subpixels, int64_t psf_res, int * subpx_poss, int * offpx_poss, int * sample_sizes, my_cui32 * intensities, my_cui32 * PSF_subpx, int verbose)
+    cdef void cpp_conv_ui16(int number_of_threads, int64_t sample_count, my_cui16 * samples, int64_t particle_count, int64_t step_count, int64_t camera_fov_px, int64_t subpixels, int64_t psf_res, int * subpx_poss, int * offpx_poss, int * sample_sizes, my_cui16 * intensities, my_cui16 * PSF_subpx, int verbose)
 
 
-def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel, datatype):
+def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel, datatype, verbose=1):
     """
     This function takes seven arguments:
 
@@ -50,6 +50,8 @@ def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes,
         Point Spread Function array, dimensions: (subpixels, subpixels, psf_res, psf_res)
     datatype : type
         datatype of intensities, PSF and output. Possible values: numpy.float64, numpy.float32, numpy.uint32, numpy.uint16
+    verbose : int
+        0 - print only errors, above 0 - print more
 
     Returns
     -------
@@ -63,13 +65,13 @@ def convolve(number_of_threads, camera_fov_px, particle_positions, sample_sizes,
         raise TypeError('camera_fov_px must be an integer')
 
     if datatype == np.float64:
-        return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
+        return convolve_fl64(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel, verbose)
     elif datatype == np.float32:
-        return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
+        return convolve_fl32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel, verbose)
     elif datatype == np.uint32:
-        return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
+        return convolve_ui32(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel, verbose)
     elif datatype == np.uint16:
-        return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel)
+        return convolve_ui16(number_of_threads, camera_fov_px, particle_positions, sample_sizes, intensities, kernel, verbose)
     else:
         raise TypeError('Datatype argument must be either numpy.float64, numpy.float32, numpy.uint32 or numpy.uint16')
 
@@ -86,22 +88,25 @@ cdef process_dims(sample_sizes, particle_positions, PSF_subpx): # Get resolution
     return sample_count, particle_count, step_count, subpixels, psf_res
 
 
+eps = 1e-10
+
 ###Convolution functions for specific datatypes
 
 ##Float64
 ctypedef np.float64_t my_fl64   # Three occurrences
 #ctypedef double my_cfl64        # Three occurences
 cdef str str_fl64 = "float64"   # One occurence
-cdef convolve_fl64(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_fl64, ndim=1] intensities, np.ndarray[my_fl64, ndim=4] PSF_subpx): ##
+cdef convolve_fl64(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_fl64, ndim=1] intensities, np.ndarray[my_fl64, ndim=4] PSF_subpx, verbose): ##
     sample_count, particle_count, step_count, subpixels, psf_res = process_dims(sample_sizes, particle_positions, PSF_subpx)
 
     # Get PSF_subpx indices from particle positions
     PSF_FOV_edge = int(PSF_subpx.shape[2] / 2)
-    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0)).astype(np.int32)
+    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - eps).astype(np.int32)
     cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)    
 
     subpx_poss[subpx_poss < 0] = 0
     subpx_poss[subpx_poss >= subpixels] = subpixels - 1
+    # subpx_poss[subpx_poss < 1] = 1
 
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
@@ -114,7 +119,7 @@ cdef convolve_fl64(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
     if particle_count != intensities.shape[0]:
         print("ERROR: Particle count in arrays \"particle_positions\" and \"intensities\" do not match")
     else:
-        cpp_conv_fl64(number_of_threads, sample_count, <my_cfl64*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, subpixels, psf_res, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <my_cfl64*>&intensities[0], <my_cfl64*>&PSF_subpx[0, 0, 0, 0]) ##
+        cpp_conv_fl64(number_of_threads, sample_count, <my_cfl64*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, subpixels, psf_res, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <my_cfl64*>&intensities[0], <my_cfl64*>&PSF_subpx[0, 0, 0, 0], verbose) ##
 
     return samples
 
@@ -122,16 +127,17 @@ cdef convolve_fl64(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
 ctypedef np.float32_t my_fl32   # Three occurrences
 #ctypedef float my_cfl32        # Three occurences
 cdef str str_fl32 = "float32"   # One occurence
-cdef convolve_fl32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_fl32, ndim=1] intensities, np.ndarray[my_fl32, ndim=4] PSF_subpx): ##
+cdef convolve_fl32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_fl32, ndim=1] intensities, np.ndarray[my_fl32, ndim=4] PSF_subpx, verbose): ##
     sample_count, particle_count, step_count, subpixels, psf_res = process_dims(sample_sizes, particle_positions, PSF_subpx)
 
     # Get PSF_subpx indices from particle positions
     PSF_FOV_edge = int(psf_res / 2)
-    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0)).astype(np.int32)
+    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - eps).astype(np.int32)
     cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)    
 
     subpx_poss[subpx_poss < 0] = 0
     subpx_poss[subpx_poss >= subpixels] = subpixels - 1
+    #subpx_poss[subpx_poss >= subpixels - 1] = subpixels - 2
 
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
@@ -144,7 +150,7 @@ cdef convolve_fl32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
     if particle_count != intensities.shape[0]:
         print("ERROR: Particle count in arrays \"particle_positions\" and \"intensities\" do not match")
     else:
-        cpp_conv_fl32(number_of_threads, sample_count, <my_cfl32*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, subpixels, psf_res, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <my_cfl32*>&intensities[0], <my_cfl32*>&PSF_subpx[0, 0, 0, 0]) ##
+        cpp_conv_fl32(number_of_threads, sample_count, <my_cfl32*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, subpixels, psf_res, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <my_cfl32*>&intensities[0], <my_cfl32*>&PSF_subpx[0, 0, 0, 0], verbose) ##
 
     return samples
 
@@ -153,16 +159,17 @@ cdef convolve_fl32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
 ctypedef np.uint32_t my_ui32  # Three occurrences
 #ctypedef uint32_t my_cui32   # Three occurences
 cdef str str_ui32 = "uint32"  # One occurence
-cdef convolve_ui32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_ui32, ndim=1] intensities, np.ndarray[my_ui32, ndim=4] PSF_subpx): ##
+cdef convolve_ui32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_ui32, ndim=1] intensities, np.ndarray[my_ui32, ndim=4] PSF_subpx, verbose): ##
     sample_count, particle_count, step_count, subpixels, psf_res = process_dims(sample_sizes, particle_positions, PSF_subpx)
 
     # Get PSF_subpx indices from particle positions
     PSF_FOV_edge = int(PSF_subpx.shape[2] / 2)
-    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0)).astype(np.int32)
+    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - eps).astype(np.int32)
     cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)    
 
     subpx_poss[subpx_poss < 0] = 0
     subpx_poss[subpx_poss >= subpixels] = subpixels - 1
+    #subpx_poss[subpx_poss < 1] = 1
     
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
@@ -175,7 +182,7 @@ cdef convolve_ui32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
     if particle_count != intensities.shape[0]:
         print("ERROR: Particle count in arrays \"particle_positions\" and \"intensities\" do not match")
     else:
-        cpp_conv_ui32(number_of_threads, sample_count, <my_cui32*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, subpixels, psf_res, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <my_cui32*>&intensities[0], <my_cui32*>&PSF_subpx[0, 0, 0, 0]) ##
+        cpp_conv_ui32(number_of_threads, sample_count, <my_cui32*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, subpixels, psf_res, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <my_cui32*>&intensities[0], <my_cui32*>&PSF_subpx[0, 0, 0, 0], verbose) ##
 
     return samples
     
@@ -183,16 +190,17 @@ cdef convolve_ui32(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
 ctypedef np.uint16_t my_ui16  # Three occurrences
 #ctypedef uint16_t my_cui16   # Three occurences
 cdef str str_ui16 = "uint16"  # One occurence
-cdef convolve_ui16(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_ui16, ndim=1] intensities, np.ndarray[my_ui16, ndim=4] PSF_subpx): ##
+cdef convolve_ui16(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_ui16, ndim=1] intensities, np.ndarray[my_ui16, ndim=4] PSF_subpx, verbose): ##
     sample_count, particle_count, step_count, subpixels, psf_res = process_dims(sample_sizes, particle_positions, PSF_subpx)
 
     # Get PSF_subpx indices from particle positions
     PSF_FOV_edge = int(PSF_subpx.shape[2] / 2)
-    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - 1.0)).astype(np.int32)
+    cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * subpixels - eps).astype(np.int32)
     cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)    
 
     subpx_poss[subpx_poss < 0] = 0
     subpx_poss[subpx_poss >= subpixels] = subpixels - 1
+    #subpx_poss[subpx_poss < 1] = 1
     
     # Make arrays stored in C order
     sample_sizes =  np.ascontiguousarray(sample_sizes)
@@ -205,7 +213,7 @@ cdef convolve_ui16(number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndi
     if particle_count != intensities.shape[0]:
         print("ERROR: Particle count in arrays \"particle_positions\" and \"intensities\" do not match")
     else:
-        cpp_conv_ui16(number_of_threads, sample_count, <my_cui16*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, subpixels, psf_res, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <my_cui16*>&intensities[0], <my_cui16*>&PSF_subpx[0, 0, 0, 0]) ##
+        cpp_conv_ui16(number_of_threads, sample_count, <my_cui16*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, subpixels, psf_res, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <my_cui16*>&intensities[0], <my_cui16*>&PSF_subpx[0, 0, 0, 0], verbose) ##
 
     return samples
 
