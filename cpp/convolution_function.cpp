@@ -49,6 +49,11 @@ inline void my_free(void * ptr){
 }
 
 
+class ConvolutionCalculator{
+    void prepare_memory(){
+        
+    }
+};
 
 int cpp_conv(   int number_of_threads,    // Maximum number of threads on which to paralalyze the convolution for loop
                 const indint sample_count, 
