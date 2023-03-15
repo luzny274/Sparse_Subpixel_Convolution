@@ -123,12 +123,15 @@ class ConvolutionCalculator{
             }
 
             auto start = high_resolution_clock::now();
+            
             // Convolution
-            #pragma omp parallel for schedule(dynamic)
+            #pragma omp parallel for schedule(dynamic, 16)
             for (indint sample_cursor = 0; sample_cursor < sample_count; sample_cursor++){ // Samples
                 indint t_id = omp_get_thread_num(); // Id of current thread
+                std::cout << t_id << ";";
                 t_id %= optimized_thread_cnt;
-                for (indint s = 0; s < step_count; s++) // Steps (frames)
+                
+                /*for (indint s = 0; s < step_count; s++) // Steps (frames)
                     for (indint p = sample_inds[sample_cursor]; p < sample_inds[sample_cursor] + (indint)sample_sizes[sample_cursor]; p++) // Particles
                     {
                         const indint by =   access_poss(offpx_poss, s, p, 0, particle_count); //Offset in main pixel dimension
@@ -143,6 +146,7 @@ class ConvolutionCalculator{
 
                         // Intensity of the particle
                         const my_decimal intensity = intensities[p];
+
 
                         if(bx > -camera_fov_px && bx < psf_res && by > -camera_fov_px && by < psf_res){ //Check whether bx and by values are valid, skip addition otherwise
                             const indint x1_start = std::max(-by, (indint)0);
@@ -164,7 +168,7 @@ class ConvolutionCalculator{
                                 psf_offx1 += psf_res;
                             }
                         }
-                    }
+                    }//*/
             }
 
             
@@ -173,7 +177,7 @@ class ConvolutionCalculator{
             if (verbose > 0){
                 printf("Computation of convolutions took %lld ms\n", duration);
                 fflush(stdout);
-            }
+            }//*/
 
             // Release allocated memory
             my_free(sample_inds);

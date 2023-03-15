@@ -40,8 +40,8 @@ ctypedef np.float32_t my_fl32   # Three occurrences
 cdef str str_fl32 = "float32"   # One occurence
 cdef class ConvolutionCalculator_fl32:
     cdef ConvolutionCalculator conv_calc
-    psf_res = 0
-    subpixels = 0
+    cdef public int64_t psf_res
+    cdef public int64_t subpixels
     def __init__(self, np.ndarray[my_fl32, ndim=4] PSF_subpx, optimized_thread_cnt, verbose = 0):
         self.subpixels =         PSF_subpx.shape[0]
         self.psf_res =           PSF_subpx.shape[2]
@@ -50,6 +50,8 @@ cdef class ConvolutionCalculator_fl32:
         self.conv_calc.prepare_memory(<my_cfl32*>&PSF_subpx[0, 0, 0, 0], self.psf_res, self.subpixels, optimized_thread_cnt, verbose)
 
     def convolve(self, number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_fl32, ndim=1] intensities, verbose = 0):
+        
+        print("Here0!!!!!")
         sample_count =   sample_sizes.shape[0]
         particle_count = particle_positions.shape[1]
         step_count =     particle_positions.shape[0]
@@ -72,6 +74,7 @@ cdef class ConvolutionCalculator_fl32:
         if particle_count != intensities.shape[0]:
             print("ERROR: Particle count in arrays \"particle_positions\" and \"intensities\" do not match")
         else:
+            print("Here!!!!!")
             self.conv_calc.convolve(number_of_threads, sample_count, <my_cfl32*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <float*>&intensities[0], verbose) ##
         return samples
 
