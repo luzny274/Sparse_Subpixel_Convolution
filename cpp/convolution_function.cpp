@@ -59,7 +59,7 @@ class ConvolutionCalculator{
             auto start = high_resolution_clock::now();
 
             
-            if(local_PSF_subpxs == NULL){
+            if(local_PSF_subpxs != NULL){
                 clear_memory();
             }
 
@@ -125,13 +125,13 @@ class ConvolutionCalculator{
             auto start = high_resolution_clock::now();
             
             // Convolution
-            #pragma omp parallel for schedule(dynamic, 16)
+            
+            #pragma omp parallel for schedule(dynamic)
             for (indint sample_cursor = 0; sample_cursor < sample_count; sample_cursor++){ // Samples
                 indint t_id = omp_get_thread_num(); // Id of current thread
-                std::cout << t_id << ";";
                 t_id %= optimized_thread_cnt;
                 
-                /*for (indint s = 0; s < step_count; s++) // Steps (frames)
+                for (indint s = 0; s < step_count; s++){ // Steps (frames)
                     for (indint p = sample_inds[sample_cursor]; p < sample_inds[sample_cursor] + (indint)sample_sizes[sample_cursor]; p++) // Particles
                     {
                         const indint by =   access_poss(offpx_poss, s, p, 0, particle_count); //Offset in main pixel dimension
@@ -161,23 +161,23 @@ class ConvolutionCalculator{
                                 const my_decimal * PSF = &local_PSF_subpxs[t_id][psf_offx1];
 
                                 #pragma omp simd
-                                for(indint x2 = 0; x2 < x2_end; x2++)
+                                for(indint x2 = 0; x2 < x2_end; x2++){
                                     samples_off[x2] += intensity * PSF[x2];
+                                }
 
                                 sample_offx1 += camera_fov_px;
                                 psf_offx1 += psf_res;
                             }
                         }
-                    }//*/
+                    }
+                }
             }
-
-            
             long long duration = duration_cast<milliseconds>(high_resolution_clock::now() - start).count();
             
             if (verbose > 0){
                 printf("Computation of convolutions took %lld ms\n", duration);
                 fflush(stdout);
-            }//*/
+            }
 
             // Release allocated memory
             my_free(sample_inds);

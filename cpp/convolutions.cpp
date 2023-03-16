@@ -16,8 +16,10 @@
 #include <vector>
 #include <algorithm>
 
+void initialize_conv(){
 
-
+    printf("Sparse Subpixel Convolution initialized\n");
+}
 #include <chrono>
 using namespace std::chrono;
 
