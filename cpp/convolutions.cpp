@@ -10,6 +10,7 @@
 #include <stdint.h>
 #include <malloc.h>
 #include <omp.h>
+#include <math.h>
 
 #include <iostream>
 #include <thread>

@@ -34,7 +34,8 @@ cdef extern from "../cpp/convolutions.cpp" namespace "conv_fl32":
 cdef extern from "../cpp/convolutions.cpp":
     void initialize_conv()
 
-eps = 1e-10
+#eps = 1e-10
+eps = 0
 
 ctypedef np.float32_t my_fl32   # Three occurrences
 #ctypedef float my_cfl32        # Three occurences
@@ -58,7 +59,7 @@ cdef class ConvolutionCalculator_fl32:
 
         # Get PSF_subpx indices from particle positions
         PSF_FOV_edge = int(self.psf_res / 2)
-        cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * self.subpixels - eps).astype(np.int32)
+        cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * self.subpixels - 1.0)).astype(np.int32)
         cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)    
 
         subpx_poss[subpx_poss < 0] = 0

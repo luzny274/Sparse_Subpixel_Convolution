@@ -10,6 +10,7 @@
     #include <stdint.h>
     #include <malloc.h>
     #include <omp.h>
+    #include <math.h>
 
     #include <iostream>
     #include <thread>
@@ -31,12 +32,10 @@ inline const int access_poss(const int * ptr, const indint step, const indint p,
 
 inline void * my_alloc(indint size){
     return malloc(size);
-    // return ::operator new(size);
 }
 
 inline void my_free(void * ptr){
     free(ptr);
-    // ::operator delete(ptr);
 }
 
 
@@ -66,10 +65,13 @@ class ConvolutionCalculator{
             // Prepare PSF for different threads
             local_PSF_subpxs = (my_decimal**)my_alloc(optimized_thread_cnt * sizeof(my_decimal*));
 
+            indint psf_sz = psf_res * psf_res * subpixels * subpixels;
+
             for (int i = 0; i < optimized_thread_cnt; i++){ 
-                local_PSF_subpxs[i] = (my_decimal*)my_alloc(psf_res * psf_res * subpixels * subpixels * sizeof(my_decimal));
-                memcpy(local_PSF_subpxs[i], PSF_subpx, psf_res * psf_res * subpixels * subpixels * sizeof(my_decimal));
+                local_PSF_subpxs[i] = (my_decimal*)my_alloc((psf_sz) * sizeof(my_decimal));
+                memcpy(local_PSF_subpxs[i], PSF_subpx, psf_sz * sizeof(my_decimal));
             }
+            
 
             long long duration = duration_cast<milliseconds>(high_resolution_clock::now() - start).count();
             

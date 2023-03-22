@@ -5,11 +5,11 @@
     "distutils": {
         "depends": [
             "../cpp/convolutions.cpp",
-            "/home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h",
-            "/home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include/numpy/arrayscalars.h",
-            "/home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h",
-            "/home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h",
-            "/home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include/numpy/ufuncobject.h"
+            "/home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h",
+            "/home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include/numpy/arrayscalars.h",
+            "/home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h",
+            "/home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h",
+            "/home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include/numpy/ufuncobject.h"
         ],
         "extra_compile_args": [
             "-O4",
@@ -22,7 +22,7 @@
             "-pthread"
         ],
         "include_dirs": [
-            "/home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include"
+            "/home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/core/include"
         ],
         "language": "c++",
         "name": "Sparse_Subpixel_Convolution",
@@ -1074,7 +1074,7 @@ typedef struct {
 } __Pyx_BufFmt_Context;
 
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":689
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":689
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -1083,7 +1083,7 @@ typedef struct {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":690
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":690
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -1092,7 +1092,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":691
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":691
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -1101,7 +1101,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":692
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":692
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1110,7 +1110,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":696
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":696
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1119,7 +1119,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":697
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":697
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1128,7 +1128,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":698
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":698
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1137,7 +1137,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":699
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":699
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1146,7 +1146,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":703
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":703
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1155,7 +1155,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":704
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":704
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1164,7 +1164,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":713
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":713
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -1173,7 +1173,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":714
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":714
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
@@ -1182,7 +1182,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_long_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":715
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":715
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1191,7 +1191,7 @@ typedef npy_longlong __pyx_t_5numpy_long_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":717
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":717
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -1200,7 +1200,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":718
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":718
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
@@ -1209,7 +1209,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":719
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":719
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1218,7 +1218,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":721
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":721
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1227,7 +1227,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":722
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":722
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1236,7 +1236,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":724
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":724
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1245,7 +1245,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":725
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":725
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1254,7 +1254,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":726
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":726
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1299,8 +1299,8 @@ typedef uint32_t __pyx_t_27Sparse_Subpixel_Convolution_my_cui32;
  */
 typedef uint16_t __pyx_t_27Sparse_Subpixel_Convolution_my_cui16;
 
-/* "sparse_conv.pyx":39
- * eps = 1e-10
+/* "sparse_conv.pyx":40
+ * eps = 0
  * 
  * ctypedef np.float32_t my_fl32   # Three occurrences             # <<<<<<<<<<<<<<
  * #ctypedef float my_cfl32        # Three occurences
@@ -1335,7 +1335,7 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
 /*--- Type declarations ---*/
 struct __pyx_obj_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":728
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":728
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1344,7 +1344,7 @@ struct __pyx_obj_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32;
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":729
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":729
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1353,7 +1353,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":730
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":730
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1362,7 +1362,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":732
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":732
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -1371,7 +1371,7 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "sparse_conv.pyx":42
+/* "sparse_conv.pyx":43
  * #ctypedef float my_cfl32        # Three occurences
  * cdef str str_fl32 = "float32"   # One occurence
  * cdef class ConvolutionCalculator_fl32:             # <<<<<<<<<<<<<<
@@ -1657,17 +1657,17 @@ static CYTHON_INLINE PyObject* __Pyx_PyInt_FromDouble(double value);
 
 /* PyFloatBinop.proto */
 #if !CYTHON_COMPILING_IN_PYPY
-static PyObject* __Pyx_PyFloat_SubtractCObj(PyObject *op1, PyObject *op2, double floatval, int inplace, int zerodivision_check);
+static PyObject* __Pyx_PyFloat_SubtractObjC(PyObject *op1, PyObject *op2, double floatval, int inplace, int zerodivision_check);
 #else
-#define __Pyx_PyFloat_SubtractCObj(op1, op2, floatval, inplace, zerodivision_check)\
+#define __Pyx_PyFloat_SubtractObjC(op1, op2, floatval, inplace, zerodivision_check)\
     (inplace ? PyNumber_InPlaceSubtract(op1, op2) : PyNumber_Subtract(op1, op2))
 #endif
 
 /* PyFloatBinop.proto */
 #if !CYTHON_COMPILING_IN_PYPY
-static PyObject* __Pyx_PyFloat_SubtractObjC(PyObject *op1, PyObject *op2, double floatval, int inplace, int zerodivision_check);
+static PyObject* __Pyx_PyFloat_SubtractCObj(PyObject *op1, PyObject *op2, double floatval, int inplace, int zerodivision_check);
 #else
-#define __Pyx_PyFloat_SubtractObjC(op1, op2, floatval, inplace, zerodivision_check)\
+#define __Pyx_PyFloat_SubtractCObj(op1, op2, floatval, inplace, zerodivision_check)\
     (inplace ? PyNumber_InPlaceSubtract(op1, op2) : PyNumber_Subtract(op1, op2))
 #endif
 
@@ -1998,6 +1998,7 @@ static const char __pyx_k_C[] = "C";
 static const char __pyx_k_np[] = "np";
 static const char __pyx_k_eps[] = "eps";
 static const char __pyx_k_Enum[] = "Enum";
+static const char __pyx_k_ceil[] = "ceil";
 static const char __pyx_k_enum[] = "enum";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
@@ -2047,6 +2048,7 @@ static PyObject *__pyx_n_s_TypeError;
 static PyObject *__pyx_n_s_ascontiguousarray;
 static PyObject *__pyx_n_s_astype;
 static PyObject *__pyx_n_s_camera_fov_px;
+static PyObject *__pyx_n_s_ceil;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_ctypes;
 static PyObject *__pyx_n_s_ctypes_util;
@@ -2091,7 +2093,6 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
 static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32_8__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32 *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_float_1_0;
-static PyObject *__pyx_float_1eneg_10;
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__2;
@@ -2100,7 +2101,7 @@ static PyObject *__pyx_tuple__4;
 static PyObject *__pyx_tuple__5;
 /* Late includes */
 
-/* "sparse_conv.pyx":46
+/* "sparse_conv.pyx":47
  *     cdef public int64_t psf_res
  *     cdef public int64_t subpixels
  *     def __init__(self, np.ndarray[my_fl32, ndim=4] PSF_subpx, optimized_thread_cnt, verbose = 0):             # <<<<<<<<<<<<<<
@@ -2146,7 +2147,7 @@ static int __pyx_pw_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32_1
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_optimized_thread_cnt)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 3, 1); __PYX_ERR(0, 46, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 3, 1); __PYX_ERR(0, 47, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -2156,7 +2157,7 @@ static int __pyx_pw_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32_1
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 46, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 47, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2174,13 +2175,13 @@ static int __pyx_pw_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32_1
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 46, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 47, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("Sparse_Subpixel_Convolution.ConvolutionCalculator_fl32.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_PSF_subpx), __pyx_ptype_5numpy_ndarray, 1, "PSF_subpx", 0))) __PYX_ERR(0, 46, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_PSF_subpx), __pyx_ptype_5numpy_ndarray, 1, "PSF_subpx", 0))) __PYX_ERR(0, 47, __pyx_L1_error)
   __pyx_r = __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32___init__(((struct __pyx_obj_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32 *)__pyx_v_self), __pyx_v_PSF_subpx, __pyx_v_optimized_thread_cnt, __pyx_v_verbose);
 
   /* function exit code */
@@ -2221,11 +2222,11 @@ static int __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32__
   __pyx_pybuffernd_PSF_subpx.rcbuffer = &__pyx_pybuffer_PSF_subpx;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer, (PyObject*)__pyx_v_PSF_subpx, &__Pyx_TypeInfo_nn___pyx_t_27Sparse_Subpixel_Convolution_my_fl32, PyBUF_FORMAT| PyBUF_STRIDES, 4, 0, __pyx_stack) == -1)) __PYX_ERR(0, 46, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer, (PyObject*)__pyx_v_PSF_subpx, &__Pyx_TypeInfo_nn___pyx_t_27Sparse_Subpixel_Convolution_my_fl32, PyBUF_FORMAT| PyBUF_STRIDES, 4, 0, __pyx_stack) == -1)) __PYX_ERR(0, 47, __pyx_L1_error)
   }
   __pyx_pybuffernd_PSF_subpx.diminfo[0].strides = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_PSF_subpx.diminfo[0].shape = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_PSF_subpx.diminfo[1].strides = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_PSF_subpx.diminfo[1].shape = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_PSF_subpx.diminfo[2].strides = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_PSF_subpx.diminfo[2].shape = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.shape[2]; __pyx_pybuffernd_PSF_subpx.diminfo[3].strides = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.strides[3]; __pyx_pybuffernd_PSF_subpx.diminfo[3].shape = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.shape[3];
 
-  /* "sparse_conv.pyx":47
+  /* "sparse_conv.pyx":48
  *     cdef public int64_t subpixels
  *     def __init__(self, np.ndarray[my_fl32, ndim=4] PSF_subpx, optimized_thread_cnt, verbose = 0):
  *         self.subpixels =         PSF_subpx.shape[0]             # <<<<<<<<<<<<<<
@@ -2234,7 +2235,7 @@ static int __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32__
  */
   __pyx_v_self->subpixels = (__pyx_v_PSF_subpx->dimensions[0]);
 
-  /* "sparse_conv.pyx":48
+  /* "sparse_conv.pyx":49
  *     def __init__(self, np.ndarray[my_fl32, ndim=4] PSF_subpx, optimized_thread_cnt, verbose = 0):
  *         self.subpixels =         PSF_subpx.shape[0]
  *         self.psf_res =           PSF_subpx.shape[2]             # <<<<<<<<<<<<<<
@@ -2243,16 +2244,16 @@ static int __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32__
  */
   __pyx_v_self->psf_res = (__pyx_v_PSF_subpx->dimensions[2]);
 
-  /* "sparse_conv.pyx":50
+  /* "sparse_conv.pyx":51
  *         self.psf_res =           PSF_subpx.shape[2]
  * 
  *         PSF_subpx =              np.ascontiguousarray(PSF_subpx)             # <<<<<<<<<<<<<<
  *         self.conv_calc.prepare_memory(<my_cfl32*>&PSF_subpx[0, 0, 0, 0], self.psf_res, self.subpixels, optimized_thread_cnt, verbose)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -2267,10 +2268,10 @@ static int __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32__
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, ((PyObject *)__pyx_v_PSF_subpx)) : __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_PSF_subpx));
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 50, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 50, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 51, __pyx_L1_error)
   __pyx_t_4 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -2287,13 +2288,13 @@ static int __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32__
       __pyx_t_6 = __pyx_t_7 = __pyx_t_8 = 0;
     }
     __pyx_pybuffernd_PSF_subpx.diminfo[0].strides = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_PSF_subpx.diminfo[0].shape = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_PSF_subpx.diminfo[1].strides = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_PSF_subpx.diminfo[1].shape = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_PSF_subpx.diminfo[2].strides = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_PSF_subpx.diminfo[2].shape = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.shape[2]; __pyx_pybuffernd_PSF_subpx.diminfo[3].strides = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.strides[3]; __pyx_pybuffernd_PSF_subpx.diminfo[3].shape = __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.shape[3];
-    if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 50, __pyx_L1_error)
+    if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 51, __pyx_L1_error)
   }
   __pyx_t_4 = 0;
   __Pyx_DECREF_SET(__pyx_v_PSF_subpx, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "sparse_conv.pyx":51
+  /* "sparse_conv.pyx":52
  * 
  *         PSF_subpx =              np.ascontiguousarray(PSF_subpx)
  *         self.conv_calc.prepare_memory(<my_cfl32*>&PSF_subpx[0, 0, 0, 0], self.psf_res, self.subpixels, optimized_thread_cnt, verbose)             # <<<<<<<<<<<<<<
@@ -2323,13 +2324,13 @@ static int __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32__
   } else if (unlikely(__pyx_t_12 >= __pyx_pybuffernd_PSF_subpx.diminfo[3].shape)) __pyx_t_5 = 3;
   if (unlikely(__pyx_t_5 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_5);
-    __PYX_ERR(0, 51, __pyx_L1_error)
+    __PYX_ERR(0, 52, __pyx_L1_error)
   }
-  __pyx_t_13 = __Pyx_PyInt_As_int64_t(__pyx_v_optimized_thread_cnt); if (unlikely((__pyx_t_13 == ((int64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 51, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_v_verbose); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 51, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_PyInt_As_int64_t(__pyx_v_optimized_thread_cnt); if (unlikely((__pyx_t_13 == ((int64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_v_verbose); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L1_error)
   __pyx_v_self->conv_calc.prepare_memory(((__pyx_t_27Sparse_Subpixel_Convolution_my_cfl32 *)(&(*__Pyx_BufPtrStrided4d(__pyx_t_27Sparse_Subpixel_Convolution_my_fl32 *, __pyx_pybuffernd_PSF_subpx.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_PSF_subpx.diminfo[0].strides, __pyx_t_10, __pyx_pybuffernd_PSF_subpx.diminfo[1].strides, __pyx_t_11, __pyx_pybuffernd_PSF_subpx.diminfo[2].strides, __pyx_t_12, __pyx_pybuffernd_PSF_subpx.diminfo[3].strides)))), __pyx_v_self->psf_res, __pyx_v_self->subpixels, __pyx_t_13, __pyx_t_5);
 
-  /* "sparse_conv.pyx":46
+  /* "sparse_conv.pyx":47
  *     cdef public int64_t psf_res
  *     cdef public int64_t subpixels
  *     def __init__(self, np.ndarray[my_fl32, ndim=4] PSF_subpx, optimized_thread_cnt, verbose = 0):             # <<<<<<<<<<<<<<
@@ -2361,7 +2362,7 @@ static int __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32__
   return __pyx_r;
 }
 
-/* "sparse_conv.pyx":53
+/* "sparse_conv.pyx":54
  *         self.conv_calc.prepare_memory(<my_cfl32*>&PSF_subpx[0, 0, 0, 0], self.psf_res, self.subpixels, optimized_thread_cnt, verbose)
  * 
  *     def convolve(self, number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_fl32, ndim=1] intensities, verbose = 0):             # <<<<<<<<<<<<<<
@@ -2416,25 +2417,25 @@ static PyObject *__pyx_pw_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_camera_fov_px)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("convolve", 0, 5, 6, 1); __PYX_ERR(0, 53, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("convolve", 0, 5, 6, 1); __PYX_ERR(0, 54, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_particle_positions)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("convolve", 0, 5, 6, 2); __PYX_ERR(0, 53, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("convolve", 0, 5, 6, 2); __PYX_ERR(0, 54, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_sample_sizes)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("convolve", 0, 5, 6, 3); __PYX_ERR(0, 53, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("convolve", 0, 5, 6, 3); __PYX_ERR(0, 54, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_intensities)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("convolve", 0, 5, 6, 4); __PYX_ERR(0, 53, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("convolve", 0, 5, 6, 4); __PYX_ERR(0, 54, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -2444,7 +2445,7 @@ static PyObject *__pyx_pw_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "convolve") < 0)) __PYX_ERR(0, 53, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "convolve") < 0)) __PYX_ERR(0, 54, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2468,15 +2469,15 @@ static PyObject *__pyx_pw_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("convolve", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 53, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("convolve", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 54, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("Sparse_Subpixel_Convolution.ConvolutionCalculator_fl32.convolve", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_particle_positions), __pyx_ptype_5numpy_ndarray, 1, "particle_positions", 0))) __PYX_ERR(0, 53, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sample_sizes), __pyx_ptype_5numpy_ndarray, 1, "sample_sizes", 0))) __PYX_ERR(0, 53, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_intensities), __pyx_ptype_5numpy_ndarray, 1, "intensities", 0))) __PYX_ERR(0, 53, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_particle_positions), __pyx_ptype_5numpy_ndarray, 1, "particle_positions", 0))) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sample_sizes), __pyx_ptype_5numpy_ndarray, 1, "sample_sizes", 0))) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_intensities), __pyx_ptype_5numpy_ndarray, 1, "intensities", 0))) __PYX_ERR(0, 54, __pyx_L1_error)
   __pyx_r = __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32_2convolve(((struct __pyx_obj_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32 *)__pyx_v_self), __pyx_v_number_of_threads, __pyx_v_camera_fov_px, __pyx_v_particle_positions, __pyx_v_sample_sizes, __pyx_v_intensities, __pyx_v_verbose);
 
   /* function exit code */
@@ -2514,29 +2515,31 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  PyArrayObject *__pyx_t_5 = NULL;
-  PyArrayObject *__pyx_t_6 = NULL;
+  PyObject *__pyx_t_5 = NULL;
+  PyObject *__pyx_t_6 = NULL;
   PyArrayObject *__pyx_t_7 = NULL;
-  int __pyx_t_8;
-  PyObject *__pyx_t_9 = NULL;
-  PyObject *__pyx_t_10 = NULL;
+  PyArrayObject *__pyx_t_8 = NULL;
+  PyArrayObject *__pyx_t_9 = NULL;
+  int __pyx_t_10;
   PyObject *__pyx_t_11 = NULL;
-  PyArrayObject *__pyx_t_12 = NULL;
-  int __pyx_t_13;
-  Py_ssize_t __pyx_t_14;
-  Py_ssize_t __pyx_t_15;
+  PyObject *__pyx_t_12 = NULL;
+  PyObject *__pyx_t_13 = NULL;
+  PyArrayObject *__pyx_t_14 = NULL;
+  int __pyx_t_15;
   Py_ssize_t __pyx_t_16;
   Py_ssize_t __pyx_t_17;
-  int __pyx_t_18;
-  int64_t __pyx_t_19;
-  Py_ssize_t __pyx_t_20;
-  Py_ssize_t __pyx_t_21;
+  Py_ssize_t __pyx_t_18;
+  Py_ssize_t __pyx_t_19;
+  int __pyx_t_20;
+  int64_t __pyx_t_21;
   Py_ssize_t __pyx_t_22;
   Py_ssize_t __pyx_t_23;
   Py_ssize_t __pyx_t_24;
   Py_ssize_t __pyx_t_25;
   Py_ssize_t __pyx_t_26;
   Py_ssize_t __pyx_t_27;
+  Py_ssize_t __pyx_t_28;
+  Py_ssize_t __pyx_t_29;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -2568,21 +2571,21 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   __pyx_pybuffernd_intensities.rcbuffer = &__pyx_pybuffer_intensities;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_particle_positions.rcbuffer->pybuffer, (PyObject*)__pyx_v_particle_positions, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 53, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_particle_positions.rcbuffer->pybuffer, (PyObject*)__pyx_v_particle_positions, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 54, __pyx_L1_error)
   }
   __pyx_pybuffernd_particle_positions.diminfo[0].strides = __pyx_pybuffernd_particle_positions.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_particle_positions.diminfo[0].shape = __pyx_pybuffernd_particle_positions.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_particle_positions.diminfo[1].strides = __pyx_pybuffernd_particle_positions.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_particle_positions.diminfo[1].shape = __pyx_pybuffernd_particle_positions.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_particle_positions.diminfo[2].strides = __pyx_pybuffernd_particle_positions.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_particle_positions.diminfo[2].shape = __pyx_pybuffernd_particle_positions.rcbuffer->pybuffer.shape[2];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer, (PyObject*)__pyx_v_sample_sizes, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 53, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer, (PyObject*)__pyx_v_sample_sizes, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 54, __pyx_L1_error)
   }
   __pyx_pybuffernd_sample_sizes.diminfo[0].strides = __pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sample_sizes.diminfo[0].shape = __pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_intensities.rcbuffer->pybuffer, (PyObject*)__pyx_v_intensities, &__Pyx_TypeInfo_nn___pyx_t_27Sparse_Subpixel_Convolution_my_fl32, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 53, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_intensities.rcbuffer->pybuffer, (PyObject*)__pyx_v_intensities, &__Pyx_TypeInfo_nn___pyx_t_27Sparse_Subpixel_Convolution_my_fl32, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 54, __pyx_L1_error)
   }
   __pyx_pybuffernd_intensities.diminfo[0].strides = __pyx_pybuffernd_intensities.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_intensities.diminfo[0].shape = __pyx_pybuffernd_intensities.rcbuffer->pybuffer.shape[0];
 
-  /* "sparse_conv.pyx":55
+  /* "sparse_conv.pyx":56
  *     def convolve(self, number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_fl32, ndim=1] intensities, verbose = 0):
  * 
  *         sample_count =   sample_sizes.shape[0]             # <<<<<<<<<<<<<<
@@ -2591,7 +2594,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
  */
   __pyx_v_sample_count = (__pyx_v_sample_sizes->dimensions[0]);
 
-  /* "sparse_conv.pyx":56
+  /* "sparse_conv.pyx":57
  * 
  *         sample_count =   sample_sizes.shape[0]
  *         particle_count = particle_positions.shape[1]             # <<<<<<<<<<<<<<
@@ -2600,7 +2603,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
  */
   __pyx_v_particle_count = (__pyx_v_particle_positions->dimensions[1]);
 
-  /* "sparse_conv.pyx":57
+  /* "sparse_conv.pyx":58
  *         sample_count =   sample_sizes.shape[0]
  *         particle_count = particle_positions.shape[1]
  *         step_count =     particle_positions.shape[0]             # <<<<<<<<<<<<<<
@@ -2609,70 +2612,88 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
  */
   __pyx_v_step_count = (__pyx_v_particle_positions->dimensions[0]);
 
-  /* "sparse_conv.pyx":60
+  /* "sparse_conv.pyx":61
  * 
  *         # Get PSF_subpx indices from particle positions
  *         PSF_FOV_edge = int(self.psf_res / 2)             # <<<<<<<<<<<<<<
- *         cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * self.subpixels - eps).astype(np.int32)
+ *         cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * self.subpixels - 1.0)).astype(np.int32)
  *         cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)
  */
-  __pyx_t_1 = __Pyx_PyInt_FromDouble((((double)__pyx_v_self->psf_res) / 2.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_FromDouble((((double)__pyx_v_self->psf_res) / 2.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_PSF_FOV_edge = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "sparse_conv.pyx":61
+  /* "sparse_conv.pyx":62
  *         # Get PSF_subpx indices from particle positions
  *         PSF_FOV_edge = int(self.psf_res / 2)
- *         cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * self.subpixels - eps).astype(np.int32)             # <<<<<<<<<<<<<<
+ *         cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * self.subpixels - 1.0)).astype(np.int32)             # <<<<<<<<<<<<<<
  *         cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_floor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_ceil); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = NULL;
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_floor); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_6))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_6);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_6, function);
+    }
+  }
+  __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_5, ((PyObject *)__pyx_v_particle_positions)) : __Pyx_PyObject_CallOneArg(__pyx_t_6, ((PyObject *)__pyx_v_particle_positions));
+  __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = PyNumber_Subtract(((PyObject *)__pyx_v_particle_positions), __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = __Pyx_PyFloat_SubtractCObj(__pyx_float_1_0, __pyx_t_6, 1.0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = __Pyx_PyInt_From_int64_t(__pyx_v_self->subpixels); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_5 = PyNumber_Multiply(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = __Pyx_PyFloat_SubtractObjC(__pyx_t_5, __pyx_float_1_0, 1.0, 0, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_3)) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_5)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_5);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_4, function);
     }
   }
-  __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_3, ((PyObject *)__pyx_v_particle_positions)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_particle_positions));
-  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_2 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Subtract(((PyObject *)__pyx_v_particle_positions), __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_astype); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyFloat_SubtractCObj(__pyx_float_1_0, __pyx_t_4, 1.0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_int64_t(__pyx_v_self->subpixels); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 61, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyNumber_Multiply(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_eps); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 61, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 61, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_astype); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 61, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 61, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_int32); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_int32); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -2684,66 +2705,66 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
       __Pyx_DECREF_SET(__pyx_t_4, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3);
+  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_2, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 61, __pyx_L1_error)
-  __pyx_t_5 = ((PyArrayObject *)__pyx_t_1);
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_7 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack) == -1)) {
       __pyx_v_subpx_poss = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 61, __pyx_L1_error)
+      __PYX_ERR(0, 62, __pyx_L1_error)
     } else {__pyx_pybuffernd_subpx_poss.diminfo[0].strides = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_subpx_poss.diminfo[0].shape = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_subpx_poss.diminfo[1].strides = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_subpx_poss.diminfo[1].shape = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_subpx_poss.diminfo[2].strides = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_subpx_poss.diminfo[2].shape = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.shape[2];
     }
   }
-  __pyx_t_5 = 0;
+  __pyx_t_7 = 0;
   __pyx_v_subpx_poss = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "sparse_conv.pyx":62
+  /* "sparse_conv.pyx":63
  *         PSF_FOV_edge = int(self.psf_res / 2)
- *         cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = ((1.0 - (particle_positions - np.floor(particle_positions))) * self.subpixels - eps).astype(np.int32)
+ *         cdef np.ndarray[np.int32_t, ndim=3] subpx_poss = (np.ceil((1.0 - (particle_positions - np.floor(particle_positions))) * self.subpixels - 1.0)).astype(np.int32)
  *         cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)             # <<<<<<<<<<<<<<
  * 
  *         subpx_poss[subpx_poss < 0] = 0
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 62, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_floor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 63, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_floor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = NULL;
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
+    __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_6)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_6);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_2, function);
     }
   }
-  __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, ((PyObject *)__pyx_v_particle_positions)) : __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_particle_positions));
-  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_4 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_6, ((PyObject *)__pyx_v_particle_positions)) : __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_particle_positions));
+  __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Subtract(__pyx_v_PSF_FOV_edge, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Subtract(__pyx_v_PSF_FOV_edge, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyFloat_SubtractObjC(__pyx_t_2, __pyx_float_1_0, 1.0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyFloat_SubtractObjC(__pyx_t_2, __pyx_float_1_0, 1.0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_astype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_astype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_int32); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 62, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_int32); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 63, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -2755,226 +2776,226 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
       __Pyx_DECREF_SET(__pyx_t_2, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
+  __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 62, __pyx_L1_error)
-  __pyx_t_6 = ((PyArrayObject *)__pyx_t_1);
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 63, __pyx_L1_error)
+  __pyx_t_8 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer, (PyObject*)__pyx_t_8, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack) == -1)) {
       __pyx_v_offpx_poss = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 62, __pyx_L1_error)
+      __PYX_ERR(0, 63, __pyx_L1_error)
     } else {__pyx_pybuffernd_offpx_poss.diminfo[0].strides = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_offpx_poss.diminfo[0].shape = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_offpx_poss.diminfo[1].strides = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_offpx_poss.diminfo[1].shape = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_offpx_poss.diminfo[2].strides = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_offpx_poss.diminfo[2].shape = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.shape[2];
     }
   }
-  __pyx_t_6 = 0;
+  __pyx_t_8 = 0;
   __pyx_v_offpx_poss = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "sparse_conv.pyx":64
+  /* "sparse_conv.pyx":65
  *         cdef np.ndarray[np.int32_t, ndim=3] offpx_poss = (PSF_FOV_edge - np.floor(particle_positions) - 1.0).astype(np.int32)
  * 
  *         subpx_poss[subpx_poss < 0] = 0             # <<<<<<<<<<<<<<
  *         subpx_poss[subpx_poss >= self.subpixels] = self.subpixels - 1
  * 
  */
-  __pyx_t_1 = PyObject_RichCompare(((PyObject *)__pyx_v_subpx_poss), __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
-  if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_subpx_poss), __pyx_t_1, __pyx_int_0) < 0)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(((PyObject *)__pyx_v_subpx_poss), __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
+  if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_subpx_poss), __pyx_t_1, __pyx_int_0) < 0)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "sparse_conv.pyx":65
+  /* "sparse_conv.pyx":66
  * 
  *         subpx_poss[subpx_poss < 0] = 0
  *         subpx_poss[subpx_poss >= self.subpixels] = self.subpixels - 1             # <<<<<<<<<<<<<<
  * 
  *         # Make arrays stored in C order
  */
-  __pyx_t_1 = __Pyx_PyInt_From_int64_t((__pyx_v_self->subpixels - 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int64_t((__pyx_v_self->subpixels - 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyInt_From_int64_t(__pyx_v_self->subpixels); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int64_t(__pyx_v_self->subpixels); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyObject_RichCompare(((PyObject *)__pyx_v_subpx_poss), __pyx_t_2, Py_GE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 65, __pyx_L1_error)
+  __pyx_t_6 = PyObject_RichCompare(((PyObject *)__pyx_v_subpx_poss), __pyx_t_2, Py_GE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_subpx_poss), __pyx_t_3, __pyx_t_1) < 0)) __PYX_ERR(0, 65, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_subpx_poss), __pyx_t_6, __pyx_t_1) < 0)) __PYX_ERR(0, 66, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "sparse_conv.pyx":68
+  /* "sparse_conv.pyx":69
  * 
  *         # Make arrays stored in C order
  *         sample_sizes =  np.ascontiguousarray(sample_sizes)             # <<<<<<<<<<<<<<
  *         subpx_poss =    np.ascontiguousarray(subpx_poss)
  *         offpx_poss =    np.ascontiguousarray(offpx_poss)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 68, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = NULL;
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
+    __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_6)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_6);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_2, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, ((PyObject *)__pyx_v_sample_sizes)) : __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_sample_sizes));
-  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_6, ((PyObject *)__pyx_v_sample_sizes)) : __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_sample_sizes));
+  __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 68, __pyx_L1_error)
-  __pyx_t_7 = ((PyArrayObject *)__pyx_t_1);
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_9 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer);
-    __pyx_t_8 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
-    if (unlikely(__pyx_t_8 < 0)) {
-      PyErr_Fetch(&__pyx_t_9, &__pyx_t_10, &__pyx_t_11);
+    __pyx_t_10 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+    if (unlikely(__pyx_t_10 < 0)) {
+      PyErr_Fetch(&__pyx_t_11, &__pyx_t_12, &__pyx_t_13);
       if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer, (PyObject*)__pyx_v_sample_sizes, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
-        Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11);
+        Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_13);
         __Pyx_RaiseBufferFallbackError();
       } else {
-        PyErr_Restore(__pyx_t_9, __pyx_t_10, __pyx_t_11);
+        PyErr_Restore(__pyx_t_11, __pyx_t_12, __pyx_t_13);
       }
-      __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
+      __pyx_t_11 = __pyx_t_12 = __pyx_t_13 = 0;
     }
     __pyx_pybuffernd_sample_sizes.diminfo[0].strides = __pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_sample_sizes.diminfo[0].shape = __pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer.shape[0];
-    if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 68, __pyx_L1_error)
+    if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 69, __pyx_L1_error)
   }
-  __pyx_t_7 = 0;
+  __pyx_t_9 = 0;
   __Pyx_DECREF_SET(__pyx_v_sample_sizes, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "sparse_conv.pyx":69
+  /* "sparse_conv.pyx":70
  *         # Make arrays stored in C order
  *         sample_sizes =  np.ascontiguousarray(sample_sizes)
  *         subpx_poss =    np.ascontiguousarray(subpx_poss)             # <<<<<<<<<<<<<<
  *         offpx_poss =    np.ascontiguousarray(offpx_poss)
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 69, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_6))) {
+    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_6);
     if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
       __Pyx_INCREF(__pyx_t_2);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
+      __Pyx_DECREF_SET(__pyx_t_6, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, ((PyObject *)__pyx_v_subpx_poss)) : __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_subpx_poss));
+  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_2, ((PyObject *)__pyx_v_subpx_poss)) : __Pyx_PyObject_CallOneArg(__pyx_t_6, ((PyObject *)__pyx_v_subpx_poss));
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 69, __pyx_L1_error)
-  __pyx_t_5 = ((PyArrayObject *)__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_7 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer);
-    __pyx_t_8 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack);
-    if (unlikely(__pyx_t_8 < 0)) {
-      PyErr_Fetch(&__pyx_t_11, &__pyx_t_10, &__pyx_t_9);
+    __pyx_t_10 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack);
+    if (unlikely(__pyx_t_10 < 0)) {
+      PyErr_Fetch(&__pyx_t_13, &__pyx_t_12, &__pyx_t_11);
       if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer, (PyObject*)__pyx_v_subpx_poss, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack) == -1)) {
-        Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_9);
+        Py_XDECREF(__pyx_t_13); Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_11);
         __Pyx_RaiseBufferFallbackError();
       } else {
-        PyErr_Restore(__pyx_t_11, __pyx_t_10, __pyx_t_9);
+        PyErr_Restore(__pyx_t_13, __pyx_t_12, __pyx_t_11);
       }
-      __pyx_t_11 = __pyx_t_10 = __pyx_t_9 = 0;
+      __pyx_t_13 = __pyx_t_12 = __pyx_t_11 = 0;
     }
     __pyx_pybuffernd_subpx_poss.diminfo[0].strides = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_subpx_poss.diminfo[0].shape = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_subpx_poss.diminfo[1].strides = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_subpx_poss.diminfo[1].shape = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_subpx_poss.diminfo[2].strides = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_subpx_poss.diminfo[2].shape = __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.shape[2];
-    if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 69, __pyx_L1_error)
+    if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 70, __pyx_L1_error)
   }
-  __pyx_t_5 = 0;
+  __pyx_t_7 = 0;
   __Pyx_DECREF_SET(__pyx_v_subpx_poss, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "sparse_conv.pyx":70
+  /* "sparse_conv.pyx":71
  *         sample_sizes =  np.ascontiguousarray(sample_sizes)
  *         subpx_poss =    np.ascontiguousarray(subpx_poss)
  *         offpx_poss =    np.ascontiguousarray(offpx_poss)             # <<<<<<<<<<<<<<
  * 
  *         cdef np.ndarray[my_fl32, ndim=4] samples = np.zeros([sample_count, step_count, camera_fov_px, camera_fov_px], dtype=str_fl32) ##
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 70, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_ascontiguousarray); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = NULL;
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
+    __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_6)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_6);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_2, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, ((PyObject *)__pyx_v_offpx_poss)) : __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_offpx_poss));
-  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_6, ((PyObject *)__pyx_v_offpx_poss)) : __Pyx_PyObject_CallOneArg(__pyx_t_2, ((PyObject *)__pyx_v_offpx_poss));
+  __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 70, __pyx_L1_error)
-  __pyx_t_6 = ((PyArrayObject *)__pyx_t_1);
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_8 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer);
-    __pyx_t_8 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack);
-    if (unlikely(__pyx_t_8 < 0)) {
-      PyErr_Fetch(&__pyx_t_9, &__pyx_t_10, &__pyx_t_11);
+    __pyx_t_10 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer, (PyObject*)__pyx_t_8, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack);
+    if (unlikely(__pyx_t_10 < 0)) {
+      PyErr_Fetch(&__pyx_t_11, &__pyx_t_12, &__pyx_t_13);
       if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer, (PyObject*)__pyx_v_offpx_poss, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, PyBUF_FORMAT| PyBUF_STRIDES, 3, 0, __pyx_stack) == -1)) {
-        Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11);
+        Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_13);
         __Pyx_RaiseBufferFallbackError();
       } else {
-        PyErr_Restore(__pyx_t_9, __pyx_t_10, __pyx_t_11);
+        PyErr_Restore(__pyx_t_11, __pyx_t_12, __pyx_t_13);
       }
-      __pyx_t_9 = __pyx_t_10 = __pyx_t_11 = 0;
+      __pyx_t_11 = __pyx_t_12 = __pyx_t_13 = 0;
     }
     __pyx_pybuffernd_offpx_poss.diminfo[0].strides = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_offpx_poss.diminfo[0].shape = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_offpx_poss.diminfo[1].strides = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_offpx_poss.diminfo[1].shape = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_offpx_poss.diminfo[2].strides = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_offpx_poss.diminfo[2].shape = __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.shape[2];
-    if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 70, __pyx_L1_error)
+    if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 71, __pyx_L1_error)
   }
-  __pyx_t_6 = 0;
+  __pyx_t_8 = 0;
   __Pyx_DECREF_SET(__pyx_v_offpx_poss, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "sparse_conv.pyx":72
+  /* "sparse_conv.pyx":73
  *         offpx_poss =    np.ascontiguousarray(offpx_poss)
  * 
  *         cdef np.ndarray[my_fl32, ndim=4] samples = np.zeros([sample_count, step_count, camera_fov_px, camera_fov_px], dtype=str_fl32) ##             # <<<<<<<<<<<<<<
  * 
  *         if particle_count != intensities.shape[0]:
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t(__pyx_v_sample_count); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_Py_intptr_t(__pyx_v_sample_count); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_From_Py_intptr_t(__pyx_v_step_count); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyList_New(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_From_Py_intptr_t(__pyx_v_step_count); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_4 = PyList_New(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_1);
   PyList_SET_ITEM(__pyx_t_4, 0, __pyx_t_1);
-  __Pyx_GIVEREF(__pyx_t_3);
-  PyList_SET_ITEM(__pyx_t_4, 1, __pyx_t_3);
+  __Pyx_GIVEREF(__pyx_t_6);
+  PyList_SET_ITEM(__pyx_t_4, 1, __pyx_t_6);
   __Pyx_INCREF(__pyx_v_camera_fov_px);
   __Pyx_GIVEREF(__pyx_v_camera_fov_px);
   PyList_SET_ITEM(__pyx_t_4, 2, __pyx_v_camera_fov_px);
@@ -2982,56 +3003,56 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   __Pyx_GIVEREF(__pyx_v_camera_fov_px);
   PyList_SET_ITEM(__pyx_t_4, 3, __pyx_v_camera_fov_px);
   __pyx_t_1 = 0;
-  __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_6 = 0;
+  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
+  PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_v_27Sparse_Subpixel_Convolution_str_fl32) < 0) __PYX_ERR(0, 72, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_v_27Sparse_Subpixel_Convolution_str_fl32) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 72, __pyx_L1_error)
-  __pyx_t_12 = ((PyArrayObject *)__pyx_t_1);
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_14 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_samples.rcbuffer->pybuffer, (PyObject*)__pyx_t_12, &__Pyx_TypeInfo_nn___pyx_t_27Sparse_Subpixel_Convolution_my_fl32, PyBUF_FORMAT| PyBUF_STRIDES, 4, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_samples.rcbuffer->pybuffer, (PyObject*)__pyx_t_14, &__Pyx_TypeInfo_nn___pyx_t_27Sparse_Subpixel_Convolution_my_fl32, PyBUF_FORMAT| PyBUF_STRIDES, 4, 0, __pyx_stack) == -1)) {
       __pyx_v_samples = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_samples.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 72, __pyx_L1_error)
+      __PYX_ERR(0, 73, __pyx_L1_error)
     } else {__pyx_pybuffernd_samples.diminfo[0].strides = __pyx_pybuffernd_samples.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_samples.diminfo[0].shape = __pyx_pybuffernd_samples.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_samples.diminfo[1].strides = __pyx_pybuffernd_samples.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_samples.diminfo[1].shape = __pyx_pybuffernd_samples.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_samples.diminfo[2].strides = __pyx_pybuffernd_samples.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_samples.diminfo[2].shape = __pyx_pybuffernd_samples.rcbuffer->pybuffer.shape[2]; __pyx_pybuffernd_samples.diminfo[3].strides = __pyx_pybuffernd_samples.rcbuffer->pybuffer.strides[3]; __pyx_pybuffernd_samples.diminfo[3].shape = __pyx_pybuffernd_samples.rcbuffer->pybuffer.shape[3];
     }
   }
-  __pyx_t_12 = 0;
+  __pyx_t_14 = 0;
   __pyx_v_samples = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "sparse_conv.pyx":74
+  /* "sparse_conv.pyx":75
  *         cdef np.ndarray[my_fl32, ndim=4] samples = np.zeros([sample_count, step_count, camera_fov_px, camera_fov_px], dtype=str_fl32) ##
  * 
  *         if particle_count != intensities.shape[0]:             # <<<<<<<<<<<<<<
  *             print("ERROR: Particle count in arrays \"particle_positions\" and \"intensities\" do not match")
  *         else:
  */
-  __pyx_t_13 = ((__pyx_v_particle_count != (__pyx_v_intensities->dimensions[0])) != 0);
-  if (__pyx_t_13) {
+  __pyx_t_15 = ((__pyx_v_particle_count != (__pyx_v_intensities->dimensions[0])) != 0);
+  if (__pyx_t_15) {
 
-    /* "sparse_conv.pyx":75
+    /* "sparse_conv.pyx":76
  * 
  *         if particle_count != intensities.shape[0]:
  *             print("ERROR: Particle count in arrays \"particle_positions\" and \"intensities\" do not match")             # <<<<<<<<<<<<<<
  *         else:
  *             self.conv_calc.convolve(number_of_threads, sample_count, <my_cfl32*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <float*>&intensities[0], verbose) ##
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "sparse_conv.pyx":74
+    /* "sparse_conv.pyx":75
  *         cdef np.ndarray[my_fl32, ndim=4] samples = np.zeros([sample_count, step_count, camera_fov_px, camera_fov_px], dtype=str_fl32) ##
  * 
  *         if particle_count != intensities.shape[0]:             # <<<<<<<<<<<<<<
@@ -3041,7 +3062,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
     goto __pyx_L3;
   }
 
-  /* "sparse_conv.pyx":77
+  /* "sparse_conv.pyx":78
  *             print("ERROR: Particle count in arrays \"particle_positions\" and \"intensities\" do not match")
  *         else:
  *             self.conv_calc.convolve(number_of_threads, sample_count, <my_cfl32*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <float*>&intensities[0], verbose) ##             # <<<<<<<<<<<<<<
@@ -3049,99 +3070,99 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
  * 
  */
   /*else*/ {
-    __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_v_number_of_threads); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L1_error)
-    __pyx_t_14 = 0;
-    __pyx_t_15 = 0;
+    __pyx_t_10 = __Pyx_PyInt_As_int(__pyx_v_number_of_threads); if (unlikely((__pyx_t_10 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L1_error)
     __pyx_t_16 = 0;
     __pyx_t_17 = 0;
-    __pyx_t_18 = -1;
-    if (__pyx_t_14 < 0) {
-      __pyx_t_14 += __pyx_pybuffernd_samples.diminfo[0].shape;
-      if (unlikely(__pyx_t_14 < 0)) __pyx_t_18 = 0;
-    } else if (unlikely(__pyx_t_14 >= __pyx_pybuffernd_samples.diminfo[0].shape)) __pyx_t_18 = 0;
-    if (__pyx_t_15 < 0) {
-      __pyx_t_15 += __pyx_pybuffernd_samples.diminfo[1].shape;
-      if (unlikely(__pyx_t_15 < 0)) __pyx_t_18 = 1;
-    } else if (unlikely(__pyx_t_15 >= __pyx_pybuffernd_samples.diminfo[1].shape)) __pyx_t_18 = 1;
+    __pyx_t_18 = 0;
+    __pyx_t_19 = 0;
+    __pyx_t_20 = -1;
     if (__pyx_t_16 < 0) {
-      __pyx_t_16 += __pyx_pybuffernd_samples.diminfo[2].shape;
-      if (unlikely(__pyx_t_16 < 0)) __pyx_t_18 = 2;
-    } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_samples.diminfo[2].shape)) __pyx_t_18 = 2;
+      __pyx_t_16 += __pyx_pybuffernd_samples.diminfo[0].shape;
+      if (unlikely(__pyx_t_16 < 0)) __pyx_t_20 = 0;
+    } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_samples.diminfo[0].shape)) __pyx_t_20 = 0;
     if (__pyx_t_17 < 0) {
-      __pyx_t_17 += __pyx_pybuffernd_samples.diminfo[3].shape;
-      if (unlikely(__pyx_t_17 < 0)) __pyx_t_18 = 3;
-    } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_samples.diminfo[3].shape)) __pyx_t_18 = 3;
-    if (unlikely(__pyx_t_18 != -1)) {
-      __Pyx_RaiseBufferIndexError(__pyx_t_18);
-      __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_17 += __pyx_pybuffernd_samples.diminfo[1].shape;
+      if (unlikely(__pyx_t_17 < 0)) __pyx_t_20 = 1;
+    } else if (unlikely(__pyx_t_17 >= __pyx_pybuffernd_samples.diminfo[1].shape)) __pyx_t_20 = 1;
+    if (__pyx_t_18 < 0) {
+      __pyx_t_18 += __pyx_pybuffernd_samples.diminfo[2].shape;
+      if (unlikely(__pyx_t_18 < 0)) __pyx_t_20 = 2;
+    } else if (unlikely(__pyx_t_18 >= __pyx_pybuffernd_samples.diminfo[2].shape)) __pyx_t_20 = 2;
+    if (__pyx_t_19 < 0) {
+      __pyx_t_19 += __pyx_pybuffernd_samples.diminfo[3].shape;
+      if (unlikely(__pyx_t_19 < 0)) __pyx_t_20 = 3;
+    } else if (unlikely(__pyx_t_19 >= __pyx_pybuffernd_samples.diminfo[3].shape)) __pyx_t_20 = 3;
+    if (unlikely(__pyx_t_20 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_20);
+      __PYX_ERR(0, 78, __pyx_L1_error)
     }
-    __pyx_t_19 = __Pyx_PyInt_As_int64_t(__pyx_v_camera_fov_px); if (unlikely((__pyx_t_19 == ((int64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L1_error)
-    __pyx_t_20 = 0;
-    __pyx_t_21 = 0;
+    __pyx_t_21 = __Pyx_PyInt_As_int64_t(__pyx_v_camera_fov_px); if (unlikely((__pyx_t_21 == ((int64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L1_error)
     __pyx_t_22 = 0;
-    __pyx_t_18 = -1;
-    if (__pyx_t_20 < 0) {
-      __pyx_t_20 += __pyx_pybuffernd_subpx_poss.diminfo[0].shape;
-      if (unlikely(__pyx_t_20 < 0)) __pyx_t_18 = 0;
-    } else if (unlikely(__pyx_t_20 >= __pyx_pybuffernd_subpx_poss.diminfo[0].shape)) __pyx_t_18 = 0;
-    if (__pyx_t_21 < 0) {
-      __pyx_t_21 += __pyx_pybuffernd_subpx_poss.diminfo[1].shape;
-      if (unlikely(__pyx_t_21 < 0)) __pyx_t_18 = 1;
-    } else if (unlikely(__pyx_t_21 >= __pyx_pybuffernd_subpx_poss.diminfo[1].shape)) __pyx_t_18 = 1;
-    if (__pyx_t_22 < 0) {
-      __pyx_t_22 += __pyx_pybuffernd_subpx_poss.diminfo[2].shape;
-      if (unlikely(__pyx_t_22 < 0)) __pyx_t_18 = 2;
-    } else if (unlikely(__pyx_t_22 >= __pyx_pybuffernd_subpx_poss.diminfo[2].shape)) __pyx_t_18 = 2;
-    if (unlikely(__pyx_t_18 != -1)) {
-      __Pyx_RaiseBufferIndexError(__pyx_t_18);
-      __PYX_ERR(0, 77, __pyx_L1_error)
-    }
     __pyx_t_23 = 0;
     __pyx_t_24 = 0;
-    __pyx_t_25 = 0;
-    __pyx_t_18 = -1;
+    __pyx_t_20 = -1;
+    if (__pyx_t_22 < 0) {
+      __pyx_t_22 += __pyx_pybuffernd_subpx_poss.diminfo[0].shape;
+      if (unlikely(__pyx_t_22 < 0)) __pyx_t_20 = 0;
+    } else if (unlikely(__pyx_t_22 >= __pyx_pybuffernd_subpx_poss.diminfo[0].shape)) __pyx_t_20 = 0;
     if (__pyx_t_23 < 0) {
-      __pyx_t_23 += __pyx_pybuffernd_offpx_poss.diminfo[0].shape;
-      if (unlikely(__pyx_t_23 < 0)) __pyx_t_18 = 0;
-    } else if (unlikely(__pyx_t_23 >= __pyx_pybuffernd_offpx_poss.diminfo[0].shape)) __pyx_t_18 = 0;
+      __pyx_t_23 += __pyx_pybuffernd_subpx_poss.diminfo[1].shape;
+      if (unlikely(__pyx_t_23 < 0)) __pyx_t_20 = 1;
+    } else if (unlikely(__pyx_t_23 >= __pyx_pybuffernd_subpx_poss.diminfo[1].shape)) __pyx_t_20 = 1;
     if (__pyx_t_24 < 0) {
-      __pyx_t_24 += __pyx_pybuffernd_offpx_poss.diminfo[1].shape;
-      if (unlikely(__pyx_t_24 < 0)) __pyx_t_18 = 1;
-    } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_offpx_poss.diminfo[1].shape)) __pyx_t_18 = 1;
-    if (__pyx_t_25 < 0) {
-      __pyx_t_25 += __pyx_pybuffernd_offpx_poss.diminfo[2].shape;
-      if (unlikely(__pyx_t_25 < 0)) __pyx_t_18 = 2;
-    } else if (unlikely(__pyx_t_25 >= __pyx_pybuffernd_offpx_poss.diminfo[2].shape)) __pyx_t_18 = 2;
-    if (unlikely(__pyx_t_18 != -1)) {
-      __Pyx_RaiseBufferIndexError(__pyx_t_18);
-      __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_24 += __pyx_pybuffernd_subpx_poss.diminfo[2].shape;
+      if (unlikely(__pyx_t_24 < 0)) __pyx_t_20 = 2;
+    } else if (unlikely(__pyx_t_24 >= __pyx_pybuffernd_subpx_poss.diminfo[2].shape)) __pyx_t_20 = 2;
+    if (unlikely(__pyx_t_20 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_20);
+      __PYX_ERR(0, 78, __pyx_L1_error)
     }
+    __pyx_t_25 = 0;
     __pyx_t_26 = 0;
-    __pyx_t_18 = -1;
-    if (__pyx_t_26 < 0) {
-      __pyx_t_26 += __pyx_pybuffernd_sample_sizes.diminfo[0].shape;
-      if (unlikely(__pyx_t_26 < 0)) __pyx_t_18 = 0;
-    } else if (unlikely(__pyx_t_26 >= __pyx_pybuffernd_sample_sizes.diminfo[0].shape)) __pyx_t_18 = 0;
-    if (unlikely(__pyx_t_18 != -1)) {
-      __Pyx_RaiseBufferIndexError(__pyx_t_18);
-      __PYX_ERR(0, 77, __pyx_L1_error)
-    }
     __pyx_t_27 = 0;
-    __pyx_t_18 = -1;
+    __pyx_t_20 = -1;
+    if (__pyx_t_25 < 0) {
+      __pyx_t_25 += __pyx_pybuffernd_offpx_poss.diminfo[0].shape;
+      if (unlikely(__pyx_t_25 < 0)) __pyx_t_20 = 0;
+    } else if (unlikely(__pyx_t_25 >= __pyx_pybuffernd_offpx_poss.diminfo[0].shape)) __pyx_t_20 = 0;
+    if (__pyx_t_26 < 0) {
+      __pyx_t_26 += __pyx_pybuffernd_offpx_poss.diminfo[1].shape;
+      if (unlikely(__pyx_t_26 < 0)) __pyx_t_20 = 1;
+    } else if (unlikely(__pyx_t_26 >= __pyx_pybuffernd_offpx_poss.diminfo[1].shape)) __pyx_t_20 = 1;
     if (__pyx_t_27 < 0) {
-      __pyx_t_27 += __pyx_pybuffernd_intensities.diminfo[0].shape;
-      if (unlikely(__pyx_t_27 < 0)) __pyx_t_18 = 0;
-    } else if (unlikely(__pyx_t_27 >= __pyx_pybuffernd_intensities.diminfo[0].shape)) __pyx_t_18 = 0;
-    if (unlikely(__pyx_t_18 != -1)) {
-      __Pyx_RaiseBufferIndexError(__pyx_t_18);
-      __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_27 += __pyx_pybuffernd_offpx_poss.diminfo[2].shape;
+      if (unlikely(__pyx_t_27 < 0)) __pyx_t_20 = 2;
+    } else if (unlikely(__pyx_t_27 >= __pyx_pybuffernd_offpx_poss.diminfo[2].shape)) __pyx_t_20 = 2;
+    if (unlikely(__pyx_t_20 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_20);
+      __PYX_ERR(0, 78, __pyx_L1_error)
     }
-    __pyx_t_18 = __Pyx_PyInt_As_int(__pyx_v_verbose); if (unlikely((__pyx_t_18 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L1_error)
-    (void)(__pyx_v_self->conv_calc.convolve(__pyx_t_8, __pyx_v_sample_count, ((__pyx_t_27Sparse_Subpixel_Convolution_my_cfl32 *)(&(*__Pyx_BufPtrStrided4d(__pyx_t_27Sparse_Subpixel_Convolution_my_fl32 *, __pyx_pybuffernd_samples.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_samples.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_samples.diminfo[1].strides, __pyx_t_16, __pyx_pybuffernd_samples.diminfo[2].strides, __pyx_t_17, __pyx_pybuffernd_samples.diminfo[3].strides)))), __pyx_v_particle_count, __pyx_v_step_count, __pyx_t_19, ((int *)(&(*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_int32_t *, __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_subpx_poss.diminfo[0].strides, __pyx_t_21, __pyx_pybuffernd_subpx_poss.diminfo[1].strides, __pyx_t_22, __pyx_pybuffernd_subpx_poss.diminfo[2].strides)))), ((int *)(&(*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_int32_t *, __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_offpx_poss.diminfo[0].strides, __pyx_t_24, __pyx_pybuffernd_offpx_poss.diminfo[1].strides, __pyx_t_25, __pyx_pybuffernd_offpx_poss.diminfo[2].strides)))), ((int *)(&(*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int32_t *, __pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer.buf, __pyx_t_26, __pyx_pybuffernd_sample_sizes.diminfo[0].strides)))), ((float *)(&(*__Pyx_BufPtrStrided1d(__pyx_t_27Sparse_Subpixel_Convolution_my_fl32 *, __pyx_pybuffernd_intensities.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_intensities.diminfo[0].strides)))), __pyx_t_18));
+    __pyx_t_28 = 0;
+    __pyx_t_20 = -1;
+    if (__pyx_t_28 < 0) {
+      __pyx_t_28 += __pyx_pybuffernd_sample_sizes.diminfo[0].shape;
+      if (unlikely(__pyx_t_28 < 0)) __pyx_t_20 = 0;
+    } else if (unlikely(__pyx_t_28 >= __pyx_pybuffernd_sample_sizes.diminfo[0].shape)) __pyx_t_20 = 0;
+    if (unlikely(__pyx_t_20 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_20);
+      __PYX_ERR(0, 78, __pyx_L1_error)
+    }
+    __pyx_t_29 = 0;
+    __pyx_t_20 = -1;
+    if (__pyx_t_29 < 0) {
+      __pyx_t_29 += __pyx_pybuffernd_intensities.diminfo[0].shape;
+      if (unlikely(__pyx_t_29 < 0)) __pyx_t_20 = 0;
+    } else if (unlikely(__pyx_t_29 >= __pyx_pybuffernd_intensities.diminfo[0].shape)) __pyx_t_20 = 0;
+    if (unlikely(__pyx_t_20 != -1)) {
+      __Pyx_RaiseBufferIndexError(__pyx_t_20);
+      __PYX_ERR(0, 78, __pyx_L1_error)
+    }
+    __pyx_t_20 = __Pyx_PyInt_As_int(__pyx_v_verbose); if (unlikely((__pyx_t_20 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L1_error)
+    (void)(__pyx_v_self->conv_calc.convolve(__pyx_t_10, __pyx_v_sample_count, ((__pyx_t_27Sparse_Subpixel_Convolution_my_cfl32 *)(&(*__Pyx_BufPtrStrided4d(__pyx_t_27Sparse_Subpixel_Convolution_my_fl32 *, __pyx_pybuffernd_samples.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_samples.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_samples.diminfo[1].strides, __pyx_t_18, __pyx_pybuffernd_samples.diminfo[2].strides, __pyx_t_19, __pyx_pybuffernd_samples.diminfo[3].strides)))), __pyx_v_particle_count, __pyx_v_step_count, __pyx_t_21, ((int *)(&(*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_int32_t *, __pyx_pybuffernd_subpx_poss.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_subpx_poss.diminfo[0].strides, __pyx_t_23, __pyx_pybuffernd_subpx_poss.diminfo[1].strides, __pyx_t_24, __pyx_pybuffernd_subpx_poss.diminfo[2].strides)))), ((int *)(&(*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_int32_t *, __pyx_pybuffernd_offpx_poss.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_offpx_poss.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_offpx_poss.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_offpx_poss.diminfo[2].strides)))), ((int *)(&(*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int32_t *, __pyx_pybuffernd_sample_sizes.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_sample_sizes.diminfo[0].strides)))), ((float *)(&(*__Pyx_BufPtrStrided1d(__pyx_t_27Sparse_Subpixel_Convolution_my_fl32 *, __pyx_pybuffernd_intensities.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_intensities.diminfo[0].strides)))), __pyx_t_20));
   }
   __pyx_L3:;
 
-  /* "sparse_conv.pyx":78
+  /* "sparse_conv.pyx":79
  *         else:
  *             self.conv_calc.convolve(number_of_threads, sample_count, <my_cfl32*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <float*>&intensities[0], verbose) ##
  *         return samples             # <<<<<<<<<<<<<<
@@ -3153,7 +3174,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   __pyx_r = ((PyObject *)__pyx_v_samples);
   goto __pyx_L0;
 
-  /* "sparse_conv.pyx":53
+  /* "sparse_conv.pyx":54
  *         self.conv_calc.prepare_memory(<my_cfl32*>&PSF_subpx[0, 0, 0, 0], self.psf_res, self.subpixels, optimized_thread_cnt, verbose)
  * 
  *     def convolve(self, number_of_threads, camera_fov_px, np.ndarray[np.double_t, ndim=3] particle_positions, np.ndarray[np.int32_t, ndim=1] sample_sizes, np.ndarray[my_fl32, ndim=1] intensities, verbose = 0):             # <<<<<<<<<<<<<<
@@ -3167,6 +3188,8 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_6);
   { PyObject *__pyx_type, *__pyx_value, *__pyx_tb;
     __Pyx_PyThreadState_declare
     __Pyx_PyThreadState_assign
@@ -3199,7 +3222,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   return __pyx_r;
 }
 
-/* "sparse_conv.pyx":80
+/* "sparse_conv.pyx":81
  *         return samples
  * 
  *     def __del__(self):             # <<<<<<<<<<<<<<
@@ -3225,7 +3248,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__del__", 0);
 
-  /* "sparse_conv.pyx":81
+  /* "sparse_conv.pyx":82
  * 
  *     def __del__(self):
  *         self.conv_calc.clear_memory()             # <<<<<<<<<<<<<<
@@ -3234,7 +3257,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
  */
   __pyx_v_self->conv_calc.clear_memory();
 
-  /* "sparse_conv.pyx":80
+  /* "sparse_conv.pyx":81
  *         return samples
  * 
  *     def __del__(self):             # <<<<<<<<<<<<<<
@@ -3249,7 +3272,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   return __pyx_r;
 }
 
-/* "sparse_conv.pyx":44
+/* "sparse_conv.pyx":45
  * cdef class ConvolutionCalculator_fl32:
  *     cdef ConvolutionCalculator conv_calc
  *     cdef public int64_t psf_res             # <<<<<<<<<<<<<<
@@ -3279,7 +3302,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int64_t(__pyx_v_self->psf_res); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int64_t(__pyx_v_self->psf_res); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3317,7 +3340,7 @@ static int __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32_7
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int64_t(__pyx_v_value); if (unlikely((__pyx_t_1 == ((int64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int64_t(__pyx_v_value); if (unlikely((__pyx_t_1 == ((int64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 45, __pyx_L1_error)
   __pyx_v_self->psf_res = __pyx_t_1;
 
   /* function exit code */
@@ -3331,7 +3354,7 @@ static int __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32_7
   return __pyx_r;
 }
 
-/* "sparse_conv.pyx":45
+/* "sparse_conv.pyx":46
  *     cdef ConvolutionCalculator conv_calc
  *     cdef public int64_t psf_res
  *     cdef public int64_t subpixels             # <<<<<<<<<<<<<<
@@ -3361,7 +3384,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int64_t(__pyx_v_self->subpixels); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int64_t(__pyx_v_self->subpixels); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3399,7 +3422,7 @@ static int __pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_fl32_9
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int64_t(__pyx_v_value); if (unlikely((__pyx_t_1 == ((int64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int64_t(__pyx_v_value); if (unlikely((__pyx_t_1 == ((int64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 46, __pyx_L1_error)
   __pyx_v_self->subpixels = __pyx_t_1;
 
   /* function exit code */
@@ -3526,7 +3549,7 @@ static PyObject *__pyx_pf_27Sparse_Subpixel_Convolution_26ConvolutionCalculator_
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":734
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":734
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -3543,7 +3566,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":735
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":735
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -3557,7 +3580,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":734
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":734
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -3576,7 +3599,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":737
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":737
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -3593,7 +3616,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":738
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":738
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -3607,7 +3630,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":737
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":737
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -3626,7 +3649,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":740
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":740
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -3643,7 +3666,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":741
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":741
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -3657,7 +3680,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":740
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":740
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -3676,7 +3699,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":743
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":743
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -3693,7 +3716,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":744
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":744
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -3707,7 +3730,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":743
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":743
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -3726,7 +3749,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":746
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":746
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -3743,7 +3766,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":747
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":747
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -3757,7 +3780,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":746
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":746
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -3776,7 +3799,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":749
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":749
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -3790,7 +3813,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":750
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":750
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -3800,7 +3823,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = (PyDataType_HASSUBARRAY(__pyx_v_d) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":751
+    /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":751
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -3812,7 +3835,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":750
+    /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":750
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -3821,7 +3844,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":753
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":753
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -3835,7 +3858,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":749
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":749
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -3850,7 +3873,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":928
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":928
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -3862,7 +3885,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_array_base", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":929
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":929
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -3871,7 +3894,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":930
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":930
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -3880,7 +3903,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   (void)(PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base));
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":928
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":928
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -3892,7 +3915,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyFinishContext();
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":932
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":932
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -3907,7 +3930,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":933
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":933
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -3916,7 +3939,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":934
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":934
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -3926,7 +3949,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = ((__pyx_v_base == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":935
+    /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":935
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -3937,7 +3960,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":934
+    /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":934
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -3946,7 +3969,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":936
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":936
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -3958,7 +3981,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":932
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":932
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -3973,7 +3996,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":940
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":940
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -3997,7 +4020,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":941
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":941
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4013,7 +4036,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":942
+      /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":942
  * cdef inline int import_array() except -1:
  *     try:
  *         __pyx_import_array()             # <<<<<<<<<<<<<<
@@ -4022,7 +4045,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 942, __pyx_L3_error)
 
-      /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":941
+      /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":941
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4036,7 +4059,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":943
+    /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":943
  *     try:
  *         __pyx_import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4051,7 +4074,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":944
+      /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":944
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -4067,7 +4090,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":941
+    /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":941
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4082,7 +4105,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":940
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":940
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -4105,7 +4128,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":946
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":946
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -4129,7 +4152,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":947
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":947
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4145,7 +4168,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":948
+      /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":948
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -4154,7 +4177,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 948, __pyx_L3_error)
 
-      /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":947
+      /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":947
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4168,7 +4191,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":949
+    /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":949
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4183,7 +4206,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":950
+      /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":950
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -4199,7 +4222,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":947
+    /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":947
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4214,7 +4237,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":946
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":946
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -4237,7 +4260,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":952
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":952
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -4261,7 +4284,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":953
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":953
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4277,7 +4300,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":954
+      /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":954
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -4286,7 +4309,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 954, __pyx_L3_error)
 
-      /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":953
+      /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":953
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4300,7 +4323,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":955
+    /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":955
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4315,7 +4338,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":956
+      /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":956
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -4331,7 +4354,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":953
+    /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":953
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4346,7 +4369,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":952
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":952
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -4369,7 +4392,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":966
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4382,7 +4405,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_timedelta64_object", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":978
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":978
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyTimedeltaArrType_Type)             # <<<<<<<<<<<<<<
@@ -4392,7 +4415,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyTimedeltaArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":966
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4406,7 +4429,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":981
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":981
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4419,7 +4442,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("is_datetime64_object", 0);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":993
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":993
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyDatetimeArrType_Type)             # <<<<<<<<<<<<<<
@@ -4429,7 +4452,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyDatetimeArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":981
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":981
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4443,7 +4466,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":996
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":996
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4454,7 +4477,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
 static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *__pyx_v_obj) {
   npy_datetime __pyx_r;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1003
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1003
  *     also needed.  That can be found using `get_datetime64_unit`.
  *     """
  *     return (<PyDatetimeScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -4464,7 +4487,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   __pyx_r = ((PyDatetimeScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":996
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":996
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4477,7 +4500,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1006
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1006
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4488,7 +4511,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
 static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject *__pyx_v_obj) {
   npy_timedelta __pyx_r;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1010
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1010
  *     returns the int64 value underlying scalar numpy timedelta64 object
  *     """
  *     return (<PyTimedeltaScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -4498,7 +4521,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   __pyx_r = ((PyTimedeltaScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1006
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1006
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4511,7 +4534,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   return __pyx_r;
 }
 
-/* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1013
+/* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1013
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4522,7 +4545,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
 static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObject *__pyx_v_obj) {
   NPY_DATETIMEUNIT __pyx_r;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1017
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1017
  *     returns the unit part of the dtype for a numpy datetime64 object.
  *     """
  *     return <NPY_DATETIMEUNIT>(<PyDatetimeScalarObject*>obj).obmeta.base             # <<<<<<<<<<<<<<
@@ -4530,7 +4553,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   __pyx_r = ((NPY_DATETIMEUNIT)((PyDatetimeScalarObject *)__pyx_v_obj)->obmeta.base);
   goto __pyx_L0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1013
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1013
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4738,6 +4761,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_ascontiguousarray, __pyx_k_ascontiguousarray, sizeof(__pyx_k_ascontiguousarray), 0, 0, 1, 1},
   {&__pyx_n_s_astype, __pyx_k_astype, sizeof(__pyx_k_astype), 0, 0, 1, 1},
   {&__pyx_n_s_camera_fov_px, __pyx_k_camera_fov_px, sizeof(__pyx_k_camera_fov_px), 0, 0, 1, 1},
+  {&__pyx_n_s_ceil, __pyx_k_ceil, sizeof(__pyx_k_ceil), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_ctypes, __pyx_k_ctypes, sizeof(__pyx_k_ctypes), 0, 0, 1, 1},
   {&__pyx_n_s_ctypes_util, __pyx_k_ctypes_util, sizeof(__pyx_k_ctypes_util), 0, 0, 1, 1},
@@ -4774,7 +4798,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 76, __pyx_L1_error)
   __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(1, 2, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(2, 944, __pyx_L1_error)
   return 0;
@@ -4786,14 +4810,14 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "sparse_conv.pyx":75
+  /* "sparse_conv.pyx":76
  * 
  *         if particle_count != intensities.shape[0]:
  *             print("ERROR: Particle count in arrays \"particle_positions\" and \"intensities\" do not match")             # <<<<<<<<<<<<<<
  *         else:
  *             self.conv_calc.convolve(number_of_threads, sample_count, <my_cfl32*>&samples[0, 0, 0, 0], particle_count, step_count, camera_fov_px, <int*>&subpx_poss[0, 0, 0], <int*>&offpx_poss[0, 0, 0], <int*>&sample_sizes[0], <float*>&intensities[0], verbose) ##
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_u_ERROR_Particle_count_in_arrays_p); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_u_ERROR_Particle_count_in_arrays_p); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
@@ -4816,7 +4840,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":944
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":944
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -4827,7 +4851,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":950
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":950
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -4847,7 +4871,6 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
   if (__Pyx_InitStrings(__pyx_string_tab) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_float_1_0 = PyFloat_FromDouble(1.0); if (unlikely(!__pyx_float_1_0)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_float_1eneg_10 = PyFloat_FromDouble(1e-10); if (unlikely(!__pyx_float_1eneg_10)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -4894,15 +4917,15 @@ static int __Pyx_modinit_type_init_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32.tp_print = 0;
   #endif
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32.tp_dictoffset && __pyx_type_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_ConvolutionCalculator_fl32, (PyObject *)&__pyx_type_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_ConvolutionCalculator_fl32, (PyObject *)&__pyx_type_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
   __pyx_ptype_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32 = &__pyx_type_27Sparse_Subpixel_Convolution_ConvolutionCalculator_fl32;
   __Pyx_RefNannyFinishContext();
   return 0;
@@ -5254,16 +5277,16 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "sparse_conv.pyx":37
- *     void initialize_conv()
+  /* "sparse_conv.pyx":38
  * 
- * eps = 1e-10             # <<<<<<<<<<<<<<
+ * #eps = 1e-10
+ * eps = 0             # <<<<<<<<<<<<<<
  * 
  * ctypedef np.float32_t my_fl32   # Three occurrences
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_eps, __pyx_float_1eneg_10) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_eps, __pyx_int_0) < 0) __PYX_ERR(0, 38, __pyx_L1_error)
 
-  /* "sparse_conv.pyx":41
+  /* "sparse_conv.pyx":42
  * ctypedef np.float32_t my_fl32   # Three occurrences
  * #ctypedef float my_cfl32        # Three occurences
  * cdef str str_fl32 = "float32"   # One occurence             # <<<<<<<<<<<<<<
@@ -5275,7 +5298,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF_SET(__pyx_v_27Sparse_Subpixel_Convolution_str_fl32, __pyx_n_u_float32);
   __Pyx_GIVEREF(__pyx_n_u_float32);
 
-  /* "sparse_conv.pyx":129
+  /* "sparse_conv.pyx":130
  * 
  * 
  * initialize_conv()             # <<<<<<<<<<<<<<
@@ -5292,7 +5315,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "../../../../../../../home/labadmin/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1013
+  /* "../../../../../home/vita/miniconda3/envs/DeepLearning/lib/python3.9/site-packages/numpy/__init__.pxd":1013
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -6467,83 +6490,6 @@ static CYTHON_INLINE PyObject* __Pyx_PyInt_FromDouble(double value) {
 
 /* PyFloatBinop */
   #if !CYTHON_COMPILING_IN_PYPY
-static PyObject* __Pyx_PyFloat_SubtractCObj(PyObject *op1, PyObject *op2, double floatval, int inplace, int zerodivision_check) {
-    const double a = floatval;
-    double b, result;
-    (void)inplace;
-    (void)zerodivision_check;
-    if (likely(PyFloat_CheckExact(op2))) {
-        b = PyFloat_AS_DOUBLE(op2);
-        
-    } else
-    #if PY_MAJOR_VERSION < 3
-    if (likely(PyInt_CheckExact(op2))) {
-        b = (double) PyInt_AS_LONG(op2);
-        
-    } else
-    #endif
-    if (likely(PyLong_CheckExact(op2))) {
-        #if CYTHON_USE_PYLONG_INTERNALS
-        const digit* digits = ((PyLongObject*)op2)->ob_digit;
-        const Py_ssize_t size = Py_SIZE(op2);
-        switch (size) {
-            case  0: b = 0.0; break;
-            case -1: b = -(double) digits[0]; break;
-            case  1: b = (double) digits[0]; break;
-            case -2:
-            case 2:
-                if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT && ((8 * sizeof(unsigned long) < 53) || (1 * PyLong_SHIFT < 53))) {
-                    b = (double) (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0]));
-                    if ((8 * sizeof(unsigned long) < 53) || (2 * PyLong_SHIFT < 53) || (b < (double) ((PY_LONG_LONG)1 << 53))) {
-                        if (size == -2)
-                            b = -b;
-                        break;
-                    }
-                }
-                CYTHON_FALLTHROUGH;
-            case -3:
-            case 3:
-                if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT && ((8 * sizeof(unsigned long) < 53) || (2 * PyLong_SHIFT < 53))) {
-                    b = (double) (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0]));
-                    if ((8 * sizeof(unsigned long) < 53) || (3 * PyLong_SHIFT < 53) || (b < (double) ((PY_LONG_LONG)1 << 53))) {
-                        if (size == -3)
-                            b = -b;
-                        break;
-                    }
-                }
-                CYTHON_FALLTHROUGH;
-            case -4:
-            case 4:
-                if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT && ((8 * sizeof(unsigned long) < 53) || (3 * PyLong_SHIFT < 53))) {
-                    b = (double) (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0]));
-                    if ((8 * sizeof(unsigned long) < 53) || (4 * PyLong_SHIFT < 53) || (b < (double) ((PY_LONG_LONG)1 << 53))) {
-                        if (size == -4)
-                            b = -b;
-                        break;
-                    }
-                }
-                CYTHON_FALLTHROUGH;
-            default:
-        #else
-        {
-        #endif
-            b = PyLong_AsDouble(op2);
-            if (unlikely(b == -1.0 && PyErr_Occurred())) return NULL;
-            
-        }
-    } else {
-        return (inplace ? PyNumber_InPlaceSubtract : PyNumber_Subtract)(op1, op2);
-    }
-        
-        PyFPE_START_PROTECT("subtract", return NULL)
-        result = a - b;
-        PyFPE_END_PROTECT(result)
-        return PyFloat_FromDouble(result);
-}
-#endif
-
-/* PyFloatBinop */
-    #if !CYTHON_COMPILING_IN_PYPY
 static PyObject* __Pyx_PyFloat_SubtractObjC(PyObject *op1, PyObject *op2, double floatval, int inplace, int zerodivision_check) {
     const double b = floatval;
     double a, result;
@@ -6606,6 +6552,83 @@ static PyObject* __Pyx_PyFloat_SubtractObjC(PyObject *op1, PyObject *op2, double
         #endif
             a = PyLong_AsDouble(op1);
             if (unlikely(a == -1.0 && PyErr_Occurred())) return NULL;
+            
+        }
+    } else {
+        return (inplace ? PyNumber_InPlaceSubtract : PyNumber_Subtract)(op1, op2);
+    }
+        
+        PyFPE_START_PROTECT("subtract", return NULL)
+        result = a - b;
+        PyFPE_END_PROTECT(result)
+        return PyFloat_FromDouble(result);
+}
+#endif
+
+/* PyFloatBinop */
+    #if !CYTHON_COMPILING_IN_PYPY
+static PyObject* __Pyx_PyFloat_SubtractCObj(PyObject *op1, PyObject *op2, double floatval, int inplace, int zerodivision_check) {
+    const double a = floatval;
+    double b, result;
+    (void)inplace;
+    (void)zerodivision_check;
+    if (likely(PyFloat_CheckExact(op2))) {
+        b = PyFloat_AS_DOUBLE(op2);
+        
+    } else
+    #if PY_MAJOR_VERSION < 3
+    if (likely(PyInt_CheckExact(op2))) {
+        b = (double) PyInt_AS_LONG(op2);
+        
+    } else
+    #endif
+    if (likely(PyLong_CheckExact(op2))) {
+        #if CYTHON_USE_PYLONG_INTERNALS
+        const digit* digits = ((PyLongObject*)op2)->ob_digit;
+        const Py_ssize_t size = Py_SIZE(op2);
+        switch (size) {
+            case  0: b = 0.0; break;
+            case -1: b = -(double) digits[0]; break;
+            case  1: b = (double) digits[0]; break;
+            case -2:
+            case 2:
+                if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT && ((8 * sizeof(unsigned long) < 53) || (1 * PyLong_SHIFT < 53))) {
+                    b = (double) (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0]));
+                    if ((8 * sizeof(unsigned long) < 53) || (2 * PyLong_SHIFT < 53) || (b < (double) ((PY_LONG_LONG)1 << 53))) {
+                        if (size == -2)
+                            b = -b;
+                        break;
+                    }
+                }
+                CYTHON_FALLTHROUGH;
+            case -3:
+            case 3:
+                if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT && ((8 * sizeof(unsigned long) < 53) || (2 * PyLong_SHIFT < 53))) {
+                    b = (double) (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0]));
+                    if ((8 * sizeof(unsigned long) < 53) || (3 * PyLong_SHIFT < 53) || (b < (double) ((PY_LONG_LONG)1 << 53))) {
+                        if (size == -3)
+                            b = -b;
+                        break;
+                    }
+                }
+                CYTHON_FALLTHROUGH;
+            case -4:
+            case 4:
+                if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT && ((8 * sizeof(unsigned long) < 53) || (3 * PyLong_SHIFT < 53))) {
+                    b = (double) (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0]));
+                    if ((8 * sizeof(unsigned long) < 53) || (4 * PyLong_SHIFT < 53) || (b < (double) ((PY_LONG_LONG)1 << 53))) {
+                        if (size == -4)
+                            b = -b;
+                        break;
+                    }
+                }
+                CYTHON_FALLTHROUGH;
+            default:
+        #else
+        {
+        #endif
+            b = PyLong_AsDouble(op2);
+            if (unlikely(b == -1.0 && PyErr_Occurred())) return NULL;
             
         }
     } else {
