@@ -46,6 +46,10 @@ class ConvolutionCalculator{
         indint subpixels = 0;
         indint optimized_thread_cnt = 0;
 
+        indint async_sample_size = 0;
+        my_decimal* async_samples = NULL;
+        indint * sample_inds = NULL;
+
         void prepare_memory(my_decimal* PSF_subpx, // Point Spread Function array with dimensions (subpixels, subpixels, psf_res, psf_res)
                             indint psf_res, 
                             indint subpixels, 
@@ -82,9 +86,8 @@ class ConvolutionCalculator{
         }
 
         
-        int convolve(   int number_of_threads,    // Maximum number of threads on which to paralalyze the convolution for loop
-                        const indint sample_count, 
-                        my_decimal * samples,           // Output array with dimensions (sample_count, step_count, camera_fov_px, camera_fov_px)
+        int async_convolve(   int number_of_threads,    // Maximum number of threads on which to paralalyze the convolution for loop
+                        const indint sample_count,
                         const indint particle_count,    
                         const indint step_count, 
                         const indint camera_fov_px, 
@@ -99,6 +102,11 @@ class ConvolutionCalculator{
                 return 0;
             }
 
+            if(async_samples != NULL){
+                printf("There is already a convolution running! Terminating function...\n");
+                return 0;
+            }
+
             int threads = omp_get_max_threads();
 
             if (verbose > 0){
@@ -109,9 +117,12 @@ class ConvolutionCalculator{
             }
             
             omp_set_num_threads(number_of_threads);
+            
+            async_sample_size = step_count * sample_count * camera_fov_px * camera_fov_px;
+            async_samples = (my_decimal*)my_alloc(async_sample_size * sizeof(my_decimal));
 
             // Prepare sample indices offsets in particle array
-            indint * sample_inds = (indint*)my_alloc(sample_count * sizeof(indint));
+            sample_inds = (indint*)my_alloc(sample_count * sizeof(indint));
             sample_inds[0] = 0;
 
             for(indint i = 1; i < sample_count; i++)
@@ -124,11 +135,11 @@ class ConvolutionCalculator{
                 return 0;
             }
 
-            auto start = high_resolution_clock::now();
+            // auto start = high_resolution_clock::now();
             
             // Convolution
             
-            #pragma omp parallel for schedule(dynamic)
+            #pragma omp parallel for schedule(dynamic) nowait
             for (indint sample_cursor = 0; sample_cursor < sample_count; sample_cursor++){ // Samples
                 indint t_id = omp_get_thread_num(); // Id of current thread
                 t_id %= optimized_thread_cnt;
@@ -159,7 +170,7 @@ class ConvolutionCalculator{
                             indint sample_offx1 = frame_ind + (0 + x1_start) * camera_fov_px + x2_start;
                             indint psf_offx1 = suby * psf_off1_ind + subx * psf_off2_ind + (std::max(by, (indint)0) + 0) * psf_res + std::max(bx, (indint)0);
                             for(indint x1 = 0; x1 < x1_end; x1++){
-                                my_decimal * samples_off = &samples[sample_offx1];
+                                my_decimal * samples_off = &async_samples[sample_offx1];
                                 const my_decimal * PSF = &local_PSF_subpxs[t_id][psf_offx1];
 
                                 #pragma omp simd
@@ -174,17 +185,33 @@ class ConvolutionCalculator{
                     }
                 }
             }
-            long long duration = duration_cast<milliseconds>(high_resolution_clock::now() - start).count();
+            // long long duration = duration_cast<milliseconds>(high_resolution_clock::now() - start).count();
             
-            if (verbose > 0){
-                printf("Computation of convolutions took %lld ms\n", duration);
-                fflush(stdout);
-            }
-
-            // Release allocated memory
-            my_free(sample_inds);
 
             return 1;
+        }
+
+        void async_convolve_join(my_decimal * samples, const int verbose){
+            if(async_samples == NULL){
+                printf("No convolution to be joined!\n");
+                return;
+            }
+
+            auto start = high_resolution_clock::now();
+            #pragma omp taskwait
+            long long duration = duration_cast<milliseconds>(high_resolution_clock::now() - start).count();
+
+            memcpy(samples, async_samples, sizeof(my_decimal) * async_sample_size);
+            my_free(async_samples);
+            my_free(sample_inds);
+            async_samples = NULL;
+            long long duration2 = duration_cast<milliseconds>(high_resolution_clock::now() - start).count();
+
+            if (verbose > 0){
+                printf("Waiting for the thread to finish took %lld ms\n", duration);
+                printf("Joining processing took %lld ms\n", duration2);
+                fflush(stdout);
+            }
         }
 
         void clear_memory(){
